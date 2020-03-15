@@ -1,0 +1,76 @@
+$headings = 'h1, h2, h3, h4, h5, h6'
+$blocks = 'p, ul, ol, blockquote'
+
+body
+    color theme('textColor.primary')
+    font-family theme('fontFamily.sans')
+    line-height: theme('lineHeight.relaxed')
+
+{$headings}
+    line-height theme('lineHeight.tight')
+    font-family theme('fontFamily.sans')
+    color theme('textColor.primary')
+    & +
+        {$blocks}
+            margin-top 0
+
+{$blocks}
+    color theme('textColor.primary')
+    line-height: theme('lineHeight.relaxed')
+
+h1
+    font-family theme('fontFamily.serif')
+
+h2
+    font-size theme('fontSize.3xl')
+    font-family theme('fontFamily.serif')
+    font-weight theme('fontWeight.semibold')
+    margin-top theme('margin.8')
+    margin-bottom theme('margin.6')
+    border-bottom 1px solid theme('borderColor.borderPrimary')
+    padding-bottom .3rem
+    @media md
+        font-size theme('fontSize.4xl')
+
+h3
+    font-size theme('fontSize.3xl')
+    font-weight theme('fontWeight.bold')
+    margin-top theme('margin.8')
+    margin-bottom theme('margin.2')
+    @media md
+        margin-bottom theme('margin.3')
+        font-size theme('fontSize.4xl')
+
+h4
+    font-size theme('fontSize.xl')
+    font-weight theme('fontWeight.bold')
+    @media md
+        font-size theme('fontSize.2xl')
+
+h4, h5, h6
+    margin-top theme('margin.4')
+    margin-bottom theme('margin.3')
+
+li
+    margin-bottom theme('margin.3')
+
+{$blocks}
+    margin-bottom theme('margin.8')
+
+blockquote
+    font-size .9em
+    color theme('colors.gray.600')
+    border-left .5rem solid theme('colors.gray.400')
+    margin theme('padding.6') 0
+    padding theme('padding.2') theme('padding.6')
+    > *
+        &:first-child
+            margin-top 0
+        &:last-child
+            margin-bottom 0
+
+em, strong
+    color theme('textColor.primary')
+
+small
+    color theme('textColor.ternary')

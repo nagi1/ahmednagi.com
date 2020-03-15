@@ -1,0 +1,80 @@
+$firstBleedingPoint = 900px
+$secondBleedingPoint = 1040px
+
+
+
+$container
+    width 100%
+    max-width theme('screens.md')
+    margin-right auto
+    margin-left auto
+    padding-left theme('padding.8')
+    padding-right theme('padding.8')
+    @media lg
+        padding-left 0
+        padding-right 0
+
+$container-lg
+    @extends $container
+    @media lg
+        max-width $firstBleedingPoint
+    @media xl
+        max-width $secondBleedingPoint
+
+$break-out-of-container
+    width 100vw
+    position relative
+    left 50%
+    right 50%
+    margin-left -50vw
+    margin-right -50vw
+    @media xl
+        display block
+        inverse-style(left, -33.33333333333%, left, 33.33333333333%)
+        right inherit
+        margin-left inherit
+        margin-right inherit
+        width theme('screens.xl')
+
+$flex-container
+    @extends $container
+    display flex
+    flex-direction column
+    align-items center
+    > *
+        min-width 100%
+
+$break-out-of-flex-container
+    @extends $break-out-of-container
+    align-self stretch
+
+$bleed-out-of-container
+    display block
+    margin theme('margin.6') auto
+    width 100%
+    @media lg
+        width $firstBleedingPoint
+    @media xl
+        width $secondBleedingPoint
+
+.container
+    @extends $container
+
+.container-lg
+    @extends $container-lg
+
+.container-xl
+    margin-left theme('margin.6')
+    margin-right theme('margin.6')
+    @media sm
+        margin-left theme('margin.12')
+        margin-right theme('margin.12')
+    @media lg
+        margin-left theme('margin.20')
+        margin-right theme('margin.20')
+
+.break-out-of-container
+    @extends $break-out-of-container
+
+.bleed-out-of-container
+    @extends $bleed-out-of-container

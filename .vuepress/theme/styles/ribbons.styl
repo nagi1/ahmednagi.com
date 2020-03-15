@@ -1,0 +1,54 @@
+$ribbon-width = 100px
+$ribbon-height = 30px
+$ribbon-border = 4px
+$ribbon-distance = ($ribbon-width / 2) - ($ribbon-height / 2) / 1.44
+
+.ribbon
+    position absolute
+    overflow hidden
+    width $ribbon-width
+    height $ribbon-width
+    top - ($ribbon-border * 2)
+    left - ($ribbon-border * 2)
+
+    &::before, &::after
+        position absolute
+        z-index -1
+        content ''
+        display block
+        border $ribbon-border solid theme('colors.gray.800')
+        border-top-color transparent
+        border-left-color transparent
+    &::before
+        top 0
+        right 0
+    &::after
+        bottom 0
+        left 0
+
+    span
+        position absolute
+        display block
+        width $ribbon-width * 2
+        height $ribbon-height
+        padding 0
+        background-color theme('colors.gray.600')
+        box-shadow 0 5px 10px rgba(0,0,0,.1)
+        color theme('colors.white')
+        font-family theme('fontFamily.sans')
+        font-size 15px
+        font-weight 700
+        line-height $ribbon-height
+        text-shadow 0 1px 1px rgba(0,0,0,.2)
+        text-transform uppercase
+        text-align center
+        right - $ribbon-distance
+        top $ribbon-distance - ($ribbon-height / 2)
+        transform rotate(-45deg)
+
+@css {
+    .ribbon.topaz > span { @apply .bg-topaz; }
+    .ribbon.topaz::before, .ribbon.topaz::after { @apply .border-red-800; }
+    .ribbon.river > span { @apply .bg-river; }
+    .ribbon.river::before, .ribbon.river::after { @apply .border-blue-700; }
+}

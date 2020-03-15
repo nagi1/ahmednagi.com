@@ -1,0 +1,23 @@
+backend:
+  name: github
+  repo: nagi1/ahmednagi.com
+  branch: master
+  
+media_folder: ".vuepress/public/uploads"
+public_folder: ".vuepress/dist/assets/img"
+
+
+collections:
+  - name: "post"
+    label: "Post"
+    folder: "articles"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Link", name: "permalink", widget: "string"}
+      - {label: "Sub Title", name: "subtitle", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "image", widget: "image"}
+      - {label: "Short Description", name: "description", widget: "string"}
+      - {label: "Tags", name: "tags", widget: "list"}
+      - {label: "Body", name: "body", widget: "markdown"}

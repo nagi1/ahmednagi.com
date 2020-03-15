@@ -1,0 +1,87 @@
+@require 'fonts'
+
+@tailwind base;
+
+:root {
+
+  // Background color
+  --color-bg-body: #ffffff;
+
+  // Main colors
+  --color-bg-primary: #f7fafc;
+  --color-bg-secondary: #1a202c;
+  --color-bg-ternary: #E2E8F0;
+
+  // Text Colors
+  --color-text-primary: #1a202c;
+  --color-text-secondary: #718096;
+  --color-text-ternary: #A0AEC0;
+
+  // Links
+  --color-link-primary: #1da1f2;
+  --color-link-hover: #e53e3e;
+
+  // Border
+  --color-border-primary: #a0aec0;
+  --color-border-Secondary: #2D3748;
+
+
+
+}
+
+/*! purgecss start ignore */
+.theme-dark {
+
+  // Background color
+   --color-bg-body: #15202b;
+
+
+  // Main colors
+  --color-bg-primary: #15202b;
+  --color-bg-secondary: #223140;
+  --color-bg-ternary: #2D3748;
+
+
+    // Text Colors
+  --color-text-primary: #EDF2F7;
+  --color-text-secondary: #718096;
+  --color-text-ternary: #A0AEC0;
+
+  --color-link-primary: #1da1f2;
+  --color-link-hover: #e53e3e;
+
+
+    // Border
+  --color-border-primary: #364657;
+  --color-border-Secondary: #A0AEC0;
+
+}
+/*! purgecss end ignore */
+
+
+
+
+@tailwind components;
+@tailwind utilities;
+
+
+// Inverse Mixin
+inverse-style(prop, value, inverse-prop, default-value) {
+	{prop}: value;
+
+	html[dir=rtl] & {
+		{inverse-prop}: value;
+		{prop}: default-value;
+	}
+}
+
+@require '~prismjs/themes/prism-okaidia.css'
+@require 'palette'
+@require 'typography'
+@require 'links'
+@require 'tables'
+@require 'code'
+@require 'ribbons'
+
+@require 'container'
+@require 'content'

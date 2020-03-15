@@ -1,0 +1,157 @@
+<template>
+	<div class="xl:px-4" :class="{ 'theme-dark': dark }">
+		<!-- Animated background. -->
+		<AnimatedGradient class="fixed inset-0" />
+
+		<!-- Search and navigation menu. -->
+		<Navigator ref="navigator" />
+
+		<!-- Page. -->
+		<div class="relative w-full max-w-screen-xl mx-auto mt-4 xl:my-8 xl:rounded-lg overflow-hidden shadow-lg">
+			<MenuButton @click="$refs.navigator.open()" />
+
+			<div class="flex flex-col">
+				<div class="flex items-center  py-3 bg-primary">
+					<div class="mx-16 flex justify-around w-full">
+						<router-link
+							class="no-underline text-secondary font-semibold text-lg hover:text-linkHover hover:underline font-semibold"
+							:to="langLink.href"
+							>{{ langLink.text }}</router-link
+						>
+
+						<dark-switcher />
+					</div>
+				</div>
+				<component :is="layout" />
+			</div>
+
+			<div class="border-t border-borderPrimary bg-transparent">
+				<Footer />
+			</div>
+		</div>
+	</div>
+</template>
+
+<script>
+	import AnimatedGradient from '@theme/components/AnimatedGradient';
+	import Navigator from '@theme/components/Navigator';
+	import MenuButton from '@theme/components/MenuButton';
+	import DarkSwitcher from '@theme/components/DarkSwitcher';
+	import Footer from '@theme/components/Footer';
+	import Bus from '@theme/Bus';
+
+	// Available layouts.
+	import Article from '@theme/layouts/Article';
+	import ArticlesAll from '@theme/layouts/ArticlesAll';
+	import ArticlesPaginated from '@theme/layouts/ArticlesPaginated';
+	import Home from '@theme/layouts/Home';
+	import Layout from '@theme/layouts/Layout';
+	import Tags from '@theme/layouts/Tags';
+
+	export default {
+		components: {
+			AnimatedGradient,
+			Navigator,
+			MenuButton,
+			DarkSwitcher,
+			Footer,
+			Article,
+			ArticlesAll,
+			ArticlesPaginated,
+			Home,
+			Layout,
+			Tags,
+		},
+		data() {
+			return { dark: false };
+		},
+		methods: {
+			setDirection() {
+				const html = document.getElementsByTagName('html')[0];
+
+				if (this.$lang === 'ar') {
+					html.setAttribute('dir', 'rtl');
+				} else {
+					html.setAttribute('dir', 'ltr');
+				}
+			},
+
+			setLanguage() {
+				if (this.$lang !== this.$page.lang) {
+					console.log('not same');
+				}
+			},
+
+			setDark(mode) {
+				this.dark = mode;
+				this.$cookies.set('dark', mode, '7d');
+			},
+
+			cleanSlug(url) {
+				return url.replace('/', '').replace(/\/$/, '');
+			},
+
+			SlugWithoutLocale(url) {
+				return this.cleanSlug(url.replace('/ar/', ''));
+			},
+
+			shared() {
+				this.setLanguage();
+				this.setDirection();
+			},
+
+			setDarkFromCookie() {
+				// Fucked up cookie
+				const darkCookie = this.$cookies.get('dark') == 'false' ? false : true;
+
+				if (darkCookie !== null) {
+					this.dark = darkCookie;
+				} else {
+					this.dark = false;
+				}
+
+				Bus.$emit('dark', this.dark);
+			},
+		},
+		created() {},
+
+		mounted() {
+			this.shared();
+			Bus.$on('dark', mode => this.setDark(mode));
+			this.setDarkFromCookie();
+		},
+
+		updated() {
+			this.shared();
+		},
+		computed: {
+			layout() {
+				if (!this.$page.path) return 'Layout'; // TODO 404.vue
+				if (this.$frontmatter.layout) return this.$frontmatter.layout;
+				if (this.$page.isArticle) return 'Article';
+				return 'Layout';
+			},
+			langLink() {
+				const currentPageSlug = this.SlugWithoutLocale(this.$page.path);
+
+				// get page in another language
+				const pageLang = this.$site.pages.filter(
+					page => currentPageSlug === this.SlugWithoutLocale(page.path) && this.$page.key !== page.key,
+				);
+
+				const link = {};
+
+				if (pageLang.length < 1) {
+					link.href = this.$lang === 'en' ? '/ar/' : '/';
+					link.text = this.$lang === 'en' ? 'النسخة العربية' : 'English';
+				} else {
+					link.href = pageLang[0].path;
+					const langText = this.$lang === 'en' ? 'اقرء النسخة العربية - ' : 'English - ';
+					link.text = langText + pageLang[0].title;
+				}
+
+				return link;
+			},
+		},
+	};
+</script>
