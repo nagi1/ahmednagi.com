@@ -1,11 +1,23 @@
 <!DOCTYPE html>
 <html dir="" lang="{{ lang }}">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title></title>
-  </head>
-  <body>
-    <div id="app"></div>
-  </body>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+		<title></title>
+	</head>
+	<body>
+		<div id="app"></div>
+		<script>
+			if (window.netlifyIdentity) {
+				window.netlifyIdentity.on('init', user => {
+					if (!user) {
+						window.netlifyIdentity.on('login', () => {
+							document.location.href = '/admin/';
+						});
+					}
+				});
+			}
+		</script>
+	</body>
 </html>
