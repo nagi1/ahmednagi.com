@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: nagi1/ahmednagi.com
+  name: git-gateway
   branch: master
   
 media_folder: ".vuepress/public/uploads"

@@ -1,12 +1,12 @@
 {
-  "name": "blog",
-  "author": "Loris Leiva",
+  "name": "ahmednagi.com",
+  "author": "Ahmed Nagi",
   "description": "Personal website and blog",
   "version": "0.1.0",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lorisleiva/blog.git"
+    "url": "git+https://github.com/nagi1/ahmednagi.com.git"
   },
   "keywords": [
     "laravel",
@@ -35,7 +35,6 @@
     "vuepress-plugin-seo": "^0.1.2"
   },
   "dependencies": {
-    "linkify-it": "^2.2.0",
     "vue-cookies": "^1.7.0"
   }
 }

@@ -4557,7 +4557,7 @@ levenary@^1.1.1:
   dependencies:
     leven "^3.1.0"
 
-linkify-it@^2.0.0, linkify-it@^2.2.0:
+linkify-it@^2.0.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/linkify-it/-/linkify-it-2.2.0.tgz#e3b54697e78bf915c70a38acd78fd09e0058b1cf"
   integrity sha512-GnAl/knGn+i1U/wjBz3akz2stz+HrHLsxMwHQGofCDfPvlf+gDKN58UtfmUquTY4/MXeE2x7k19KQmeoZi94Iw==
