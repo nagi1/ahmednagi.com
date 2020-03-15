@@ -44,11 +44,8 @@ module.exports = {
 		['meta', { name: 'msapplication-TileImage', content: '/ms-icon-144x144.png' }],
 		['meta', { name: 'theme-color', content: '#ffffff' }],
 	],
-	postcss: {
-		plugins: [require('tailwindcss')(), require('autoprefixer')],
-	},
+
 	markdown: {
-		// options for markdown-it-toc
 		toc: { includeLevel: [1, 2, 3] },
 	},
 };
