@@ -50,6 +50,5 @@ module.exports = {
 	markdown: {
 		// options for markdown-it-toc
 		toc: { includeLevel: [1, 2, 3] },
-		inkify: true,
 	},
 };
