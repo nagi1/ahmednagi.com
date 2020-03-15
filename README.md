@@ -1,7 +1,7 @@
 ---
-title: Loris Leiva
-metaTitle: Loris Leiva | Recreational programming
-subtitle: Recreational programming
+title: Ahmed Nagi
+metaTitle: Ahmed Nagi | Dev Blog
+subtitle: Dev Blog
 searchableTitle: Home
 icon: home
 layout: Home

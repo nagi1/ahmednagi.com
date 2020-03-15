@@ -25,10 +25,10 @@ module.exports = {
 					lengthPerPage: 10,
 				},
 				sitemap: {
-					hostname: 'https://lorisleiva.com',
+					hostname: 'https://ahmednagi.com',
 				},
 				feed: {
-					canonical_base: 'https://lorisleiva.com',
+					canonical_base: 'https://ahmednagi.com',
 				},
 			},
 		],

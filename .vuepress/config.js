@@ -1,25 +1,25 @@
 module.exports = {
-	title: 'Loris Leiva',
+	title: 'Ahmed Nagi',
 	locales: {
 		'/ar/': {
 			lang: 'ar',
-			title: 'تجربة',
-			description: 'تجربة',
+			title: 'احمد ناجي',
+			description: 'مدونة',
 		},
 		'/': {
-			lang: 'en', // this will be set as the lang attribute on <html>
-			title: 'VuePress',
-			description: 'Vue-powered Static Site Generator',
+			lang: 'en',
+			title: 'Ahmed Nagi',
+			description: 'Dev Blog',
 		},
 	},
 	themeConfig: {
-		domain: 'https://lorisleiva.com',
+		domain: 'https://ahmednagi.com',
 
-		repo: 'https://github.com/lorisleiva/blog',
+		repo: 'https://github.com/nagi1/ahmednagi.com',
 		nav: ['/', '/tag/', '/all/', '/cv/'],
 		author: {
-			name: 'Loris Leiva',
-			twitter: '@lorismatic',
+			name: 'Ahmed Nagi',
+			twitter: '@nagiworks',
 		},
 		articlesPerPage: 10,
 		minimumFeaturedArticles: 10,

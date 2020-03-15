@@ -1,6 +1,6 @@
 ---
 title: احمد ناجي
-metaTitle: Loris Leiva | Recreational programming
+metaTitle: الصفحة الرئيسية
 subtitle: نعم
 searchableTitle: Home
 icon: home
