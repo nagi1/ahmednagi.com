@@ -1,26 +1,23 @@
 backend:
   name: git-gateway
   branch: master
-  
-media_folder: ".vuepress/public/uploads"
-public_folder: ".vuepress/dist/assets/img"
 
+media_folder: '.vuepress/public/uploads'
+public_folder: '.vuepress/dist/assets/img'
 
 collections:
-  - name: "articles"
-    label: "Articles"
+  - name: 'articles'
+    label: 'Articles'
     label_singular: 'Article'
-    folder: "articles"
+    folder: 'articles'
     create: true
-    path: "{{year}}{{month}}{{day}} {{slug}}"
+    path: '{{year}}{{month}}{{day}} {{slug}}'
     media_folder: ''
-    # public_folder: ''
     fields:
-      - {label: "Link", name: "permalink", widget: "string"}
-      - {label: "Sub Title", name: "subtitle", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Featured Image", name: "image", widget: "image"}
-      - {label: "Short Description", name: "description", widget: "string"}
-      - {label: "Tags", name: "tags", widget: "list"}
-      - {label: "Body", name: "body", widget: "markdown"}
-
+      - { label: 'Link', name: 'permalink', widget: 'string' }
+      - { label: 'Sub Title', name: 'subtitle', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Featured Image', name: 'image', widget: 'image' }
+      - { label: 'Short Description', name: 'description', widget: 'string' }
+      - { label: 'Tags', name: 'tags', widget: 'list' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
