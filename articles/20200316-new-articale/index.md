@@ -2,7 +2,7 @@
 title: New Articale
 image: dns_tip.png
 permalink: new-article
-date: '2020-03-16 13:23 PM'
+date: '2020-03-16 13:23'
 description: short
 tags:
   - news
