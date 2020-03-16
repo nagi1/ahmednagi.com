@@ -1,6 +1,6 @@
 ---
 disqus: ghost-59df8fe74c4b014f20995452
-title: '# Conciliating Laravel and DDD (part 2)'
+title: Conciliating Laravel and DDD (part 2)
 permalink: conciliating-laravel-and-ddd-part-2
 subtitle: subtitle
 date: 2018-02-19T16:08:00.000Z
