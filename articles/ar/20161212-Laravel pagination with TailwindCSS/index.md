@@ -1,5 +1,6 @@
 ---
 permalink: ar/laravel-page
+title: لارافيل
 image: /covers/laravel-pagination-with-tailwindcss.png
 description: A better way of designing your Laravel pagination links with TailwindCSS.
 tags: ['Tailwind', 'Laravel', 'Open Source']
