@@ -4,8 +4,8 @@ backend:
 
 publish_mode: editorial_workflow
 
-media_folder: '.vuepress/public/uploads'
-public_folder: '.vuepress/dist/assets/img'
+media_folder: .vuepress/public/uploads
+public_folder: .vuepress/dist/assets/img
 
 collections:
   - name: 'articles'
@@ -13,9 +13,9 @@ collections:
     label_singular: 'Article'
     folder: 'articles'
     create: true
+    media_folder: .vuepress/public/uploads
+    public_folder: .vuepress/dist/assets/img
     path: '{{year}}{{month}}{{day}}-{{slug}}/index'
-    media_folder: '.vuepress/public/uploads'
-    public_folder: '.vuepress/dist/assets/img'
     # media_folder: ''
     # public_folder: ''
 
