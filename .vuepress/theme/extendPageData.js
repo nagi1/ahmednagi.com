@@ -21,7 +21,10 @@ function ensurePageHasFrontmatter(page) {
 }
 
 function classify(page) {
-    page.isArticle = page.regularPath.startsWith('/articles/') && page.regularPath !== '/articles/' 
+    page.isArticle =
+			page.regularPath.startsWith('/articles/') &&
+			page.regularPath !== '/articles/' &&
+			page.frontmatter.layout !== 'ArticlesAll';
     page.isTag = page.regularPath.startsWith('/tag/')
     page.isSearchable = page.regularPath.indexOf('/page/') === -1
 }

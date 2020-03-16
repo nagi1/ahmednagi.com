@@ -28,7 +28,6 @@
 			Bus.$on('dark', mode => {
 				this.dark = mode;
 			});
-
 		},
 	};
 </script>

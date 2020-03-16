@@ -27,7 +27,7 @@ corner-triangle(size, paddingTop, paddingRight)
         right paddingRight - (size * 2)
 
 .menu-button
-    corner-triangle(30px, 7px, 7px)
+    corner-triangle(30px, 7px, 5px)
     @media sm
-        corner-triangle(40px, 11px, 12px)
+        corner-triangle(50px, 18px, 15px)
 </style>

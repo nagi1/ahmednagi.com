@@ -1,5 +1,5 @@
 ---
-permalink: ar/all
+permalink: /ar/all
 layout: ArticlesAll
 icon: collection
 tags: []

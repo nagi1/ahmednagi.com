@@ -7,11 +7,14 @@ public_folder: ".vuepress/dist/assets/img"
 
 
 collections:
-  - name: "article"
-    label: "Article"
+  - name: "articles"
+    label: "Articles"
+    label_singular: 'Article'
     folder: "articles"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    path: "{{year}}{{month}}{{day}} {{slug}}"
+    media_folder: ''
+    # public_folder: ''
     fields:
       - {label: "Link", name: "permalink", widget: "string"}
       - {label: "Sub Title", name: "subtitle", widget: "string"}
@@ -20,3 +23,4 @@ collections:
       - {label: "Short Description", name: "description", widget: "string"}
       - {label: "Tags", name: "tags", widget: "list"}
       - {label: "Body", name: "body", widget: "markdown"}
+

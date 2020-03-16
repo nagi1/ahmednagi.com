@@ -102,12 +102,12 @@
 
 			setDarkFromCookie() {
 				// Fucked up cookie
-				const darkCookie = this.$cookies.get('dark') == 'false' ? false : true;
+				const darkCookie = this.$cookies.get('dark');
 
-				if (darkCookie !== null) {
-					this.dark = darkCookie;
-				} else {
+				if (darkCookie === null) {
 					this.dark = false;
+				} else {
+					this.dark = darkCookie === 'false' ? false : true;
 				}
 
 				Bus.$emit('dark', this.dark);
@@ -123,6 +123,7 @@
 
 		updated() {
 			this.shared();
+			Bus.$emit('dark', this.dark);
 		},
 		computed: {
 			layout() {

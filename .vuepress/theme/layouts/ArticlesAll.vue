@@ -29,5 +29,8 @@
 				return relativeDate(article.isoDate);
 			},
 		},
+		created() {
+			console.log(this.$page);
+		},
 	};
 </script>
