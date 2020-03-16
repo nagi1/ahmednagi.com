@@ -1,10 +1,13 @@
 ---
-permalink: ar/laravel-page
 title: لارافيل
-image: /covers/laravel-pagination-with-tailwindcss.png
+image: /covers/conciliating-laravel-and-ddd-part-2.jpg
+permalink: ar/laravel-page
+date: 2019-03-22T21:56:00.000Z
 description: A better way of designing your Laravel pagination links with TailwindCSS.
-tags: ['Tailwind', 'Laravel', 'Open Source']
-date: 2019-03-22T21:56:00Z
+tags:
+  - Tailwind
+  - Laravel
+  - Open Source
 ---
 # لارافيل
 
@@ -25,6 +28,7 @@ At first, you might be tempted to publish the views, copy/paste one of the exist
 The trouble with this approach is that those pagination templates define various elements that need to be styled slightly differently whilst all being siblings of each other. If you want to be creative with your pagination you’re going to need the `$loop` variables involved in your TailwindCSS classes. For having done that a couple of times, I can assure you, you’re going to wish there was another solution.
 
 ## Another solution
+
 Okay so instead of trying to create a new template that uses TailwindCSS, why don’t we use the default template and let TailwindCSS do the work by adding a pagination plugin.
 
 ```sh
@@ -47,11 +51,16 @@ You can now display your Laravel pagination links without having to worry about 
 {{ $items->links() }}
 ```
 
-![Pagination default style](./pagination.png)
+![Pagination default style](/uploads/conciliating-laravel-and-ddd-part-2.jpg)
 
 <GithubButton url="https://github.com/lorisleiva/tailwindcss-plugins/tree/master/pagination" title="Pagination plugin on GitHub"></GithubButton>
 
 ## Customizations
+
+
+
+![]()
+
 Whilst that's nice and simple, you’re very likely going to want to customize the design of those pagination links to match the style of your application.
 
 This pagination plugin allows you to override all aspects of its design by either providing CSS-in-JS or a simple list of TailwindCSS classes. Alternatively you can change the color of the default the design.
@@ -138,6 +147,7 @@ Here are some examples of plugin configurations with their results.
 ```
 
 ## Conclusion
+
 Since TailwindCSS was first released, it has taken over the why I design my applications for the best. Every step towards making TailwindCSS easier to integrate with Laravel is a win in my book. I hope this was a win for you too. Enjoy 😘
 
 <GithubButton url="https://github.com/lorisleiva/tailwindcss-plugins/tree/master/pagination" title="Pagination plugin on GitHub"></GithubButton>

@@ -1,10 +1,10 @@
 ---
 disqus: ghost-59ddddc94c4b014f2099543c
 title: Conciliating Laravel and DDD
+image: /covers/conciliating-laravel-and-ddd.jpg
 permalink: conciliating-laravel-and-ddd
 subtitle: short description
 date: 2017-10-12T12:07:00.000Z
-image: /covers/conciliating-laravel-and-ddd.jpg
 description: >-
   This article focuses on finding common grounds for using Domain-Driven Design
   in the Laravel framework in a way that leverages a maximum of Laravel
@@ -13,12 +13,12 @@ tags:
   - Domain Modeling
   - Laravel
 ---
-
 # Conciliating Laravel and DDD
 
 This article focuses on finding common ground for using Domain-Driven Design in the Laravel framework in a way that leverages a maximum of Laravel features.
 
 ## Introduction
+
 If you follow some key members of the Laravel community you might have noticed some occasional tensions between the *Laravel lovers*  — proning clean and simple code — and the *PHP experts* — proning separation of concerns no matter what. Even though I am obviously a biased *Laravel lover*, I often find myself submerged by the increasing complexity of my applications in the long run. Therefore I decided that it might be time for me to dig into the world of *Domain-Driven Design (Evans 2004)*.
 
 <small>Note: I am assuming that you either read that book or that you are at least familiar with the concept of DDD. A gentle introduction by Mathias Verraes [can be found here](http://verraes.net/2014/09/decoupling-model-framework/).</small>
@@ -28,6 +28,7 @@ University taught me a lot from technical design patterns to enterprise oriented
 Hence, this article's purpose is to dig deeper into the concepts of DDD applied to the Laravel framework. As a matter of fact they are not totally mutually exclusive. We just need more disciple as developers to make this work. Just like any religious books, the blue book is subject to interpretations and contexts. Here I will share my interpretation in the Laravel context.
 
 ## End-goal rules
+
 Before going through all of that, let's take a minute to analyze what we want to achieve and what we want to avoid in this journey. We will — consulting style — create 3 rules for that:
 
 * **Rule A: Keep focus on the domain of the application.** Without this we lose the very essence of DDD. Our model objects need to be inline with our domain and need to follow the *Ubiquitous Language* of the project.
@@ -35,9 +36,10 @@ Before going through all of that, let's take a minute to analyze what we want to
 * **Rule C: Keep it simple.** It is somewhat linked to the previous rule but we do not want to create and inject dozens of classes when `User::find(1)` or `config('app.name')` suffice. Additionally, we do not want to maintain two versions of our model objects: one that our domain understands and one that Laravel understands.
 
 ## A mismatch in the layer structure
+
 One of the key concepts of DDD is to isolate your domain logic from the rest of your application. This helps developers reasoning about their software when complexity increases. To reach this state, Evans advises us to partition our program into a *Layered Architecture*. This can be done in a number of ways — as long as the domain is isolated — but the book uses the following architecture.
 
-![Layered Architecture overview](./Layered-architecture-overview-1.png#w80)
+![Layered Architecture overview](/uploads/dns_tip.png)
 
 The first thing I did when reading this part of the book was to try matching the actual Laravel folders within those layers.
 
@@ -50,11 +52,13 @@ As you can see, folders are all over the place and sometimes it is a bit challen
 We can agree or disagree on any of those structures and their components but the fact is they don't fit nicely together out-of-the-box.
 
 ## Towards a compromising structure
+
 This is the core of the article. Where we will start with an empty layered structure and little by little reach a state where Laravel and DDD cohabitate together.
 
 ![Empty layered structure](./Compromising-layered-architecture-0.png#w90)
 
 ### Focus on the domain
+
 Let's start by adding all of the building blocks of a Domain-Driven implementation into our domain layer. Our domain is semantically segmented in various **Modules** which contain their own model objects. These objects can have an identity, i.e. **Entities**, or can be solely identified by the value of their attributes, i.e. **Value Objects**. Groups of Entities and Value Objects form **Aggregates**. 
 
 Some domain concepts are not meant to be persisted or to have a state that evolves, they are called **Services**. Their role is simply to compute some output and/or do some actions based on some inputs.
@@ -68,6 +72,7 @@ Nothing new here. Just stating the basis of our domain implementation.
 <small>Squares are classes, hexagons are interfaces.</small>
 
 ### Leverage the framework in your domain
+
 This is where the brain freeze occurs. How do we use everything that Laravel has to offer when all of our logic lives outside our application layer?
 
 We could treat all domain objects as *Plain Old PHP Objects (POPOs)* but that would imply the need for data mappers and the abandon of Laravel's active record: *Eloquent*. Once this is done we have already lost a good chunk of Laravel's power which is a breach of **rule B**.
@@ -81,9 +86,11 @@ It is also possible to leverage the goodness provided by Laravel Jobs into our d
 The key point here is the balance between using Laravel's goodness and not clustering our domain with technical details. The moment we accept the fact the technical paradigm we are using is **The Laravel Framework™** and not a general object-oriented language, it does make sense to use and extend Laravel classes, traits and interfaces within our domain. This is our new base. This is our new empty class.
 
 If a new developer glance at a Service object in our domain and see the line ...
+
 ```php
 use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 ```
+
 ... he/she will not be traumatized.
 
 Yes, it requires more discipline for developers not to go too far and transform object models into Laravel configuration files, but it is far from impossible.
@@ -97,6 +104,7 @@ The only exception would be anything related to our `/database` since it is alre
 <small>Green is our domain, Grey is everything we are familiar with in Laravel</small>
 
 ### Use the domain in your Laravel app
+
 This part is very straightforward. We simply add to our *Layered Architecture* all the Laravel concept that we all know.
 
 * The routes can be semantically seen as the entry point of our application based on the desired interface. By default, Laravel even provides one file per interface — `web.php`, `api.php`, `console.php`, etc.
@@ -111,6 +119,7 @@ Note that so far, outside the domain layer, nothing has changed in the way we us
 <small>Dashed arrows make up the logical workflow of incoming requests. Any controllers, commands, jobs or other classes executing logical code should eventually delegate to the domain layer.</small>
 
 ### Application modules
+
 One last thing that our architecture is lacking, is the concrete implementation of interfaces within our domain, e.g. our repository interfaces.
 
 Therefore for each module on the domain layer, we need a matching module in the application layer which takes responsibility for what the domain layer cannot afford to care about. This implies repository implementations but also some local providers which will bind interfaces with their implementation.
@@ -131,6 +140,7 @@ Final architecture:<br>
 </small>
 
 ### A note on repository implementations
+
 Even though our Aggregates and Entities are using Eloquent, I think it is important to use repositories to provide a bottleneck for accessing and persisting our object models to — at least — free them of that burden.
 
 This does not mean that we can't leverage the power of Eloquent within the implementation of those repositories. All we have to do is wrap calls to the `Eloquent\Builder` or the `Query\Builder` into methods that make sense to our domain and our *Ubiquitous Language*.
@@ -181,10 +191,10 @@ However, we do have some significant advantages with this approach:
 * We do not have to cluster our object models with local scopes or other repository-like methods. This is particularly important now that our Eloquent models are part of the domain.
 
 ## A possible folder structure
+
 Because **rule B** forced us to stay true to Laravel, we actually haven't changed many aspects of its structure. Here, I will suggest a simple folder structure to concretely implement what we've discussed so far.
 
 * We start with a fresh install of Laravel
-
 * We add a `/domain` folder at the root of our project and autoload its content within the `Domain` namespace. Don't forget to `composer dump-autoload`.
 
 ```json
@@ -215,7 +225,7 @@ Because **rule B** forced us to stay true to Laravel, we actually haven't change
         |___ ValueObjectC.php
         |___ ...
 ```
-    
+
 * We add a folder per module in the `/app` folder.
 
 ```
@@ -237,6 +247,7 @@ What I like the most about having a dedicated folder for each module in the appl
 Also note that I did not wrap all modules in the application layer inside a `/Modules` folder — or something similar. This keeps our namespaces clearer and creates a matching convention between our domain layer `Domain\Shipping\Cargo` and our application layer `App\Shipping\Cargo`.
 
 ## Conclusion
+
 Implementing Domain-Driven Design is always going to be a challenge no matter what framework we use. The blue book and the writing of this article helped me in the process of understanding how to use DDD without frustrating our use of Laravel as we know it. My goal is not to provide a textbook structure that everyone should follow but to share my **current view** on the matter and establish the basis of a very interesting discovery process.
 
 As promised, [part 2 of this article](/conciliating-laravel-and-ddd-part-2) will focus on how to leverage the use of Eloquent within the domain layer and try to deal with the frustrations that come along.

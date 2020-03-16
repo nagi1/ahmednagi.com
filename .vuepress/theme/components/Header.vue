@@ -2,7 +2,7 @@
     <header class="my-10">
         <router-link v-if="! noHome" tag="button" :to="$lang === 'ar' ? '/ar/' : '/'" class="group flex items-center text-ternary mb-2 focus:outline-none">
 
-            <Icon icon="arrow-thin-left-circle" class="w-6 h-6 mr-1" primary="text-white opacity-50 group-hover:opacity-100" secondary="group-hover:text-gray-900 text-ternary"></Icon>
+            <Icon icon="arrow-thin-left-circle" class="w-6 h-6 ltr:mr-1 rtl:ml-1" primary="text-white opacity-50 group-hover:opacity-100" secondary="group-hover:text-gray-900 text-ternary"></Icon>
 
             <div class="uppercase tracking-wider font-semibold text-sm group-hover:text-primary">Home</div>
         </router-link>

@@ -2,23 +2,22 @@ backend:
   name: git-gateway
   branch: master
 
+local_backend: true
 publish_mode: editorial_workflow
 
 media_folder: .vuepress/public/uploads
-public_folder: .vuepress/dist/assets/img
+public_folder: /uploads
 
 collections:
+
   - name: 'articles'
     label: 'Articles'
     label_singular: 'Article'
     folder: 'articles'
     create: true
-    media_folder: .vuepress/public/uploads
-    public_folder: .vuepress/dist/assets/img
+    media_folder: ../../.vuepress/public/uploads
+    public_folder: /uploads
     path: '{{year}}{{month}}{{day}}-{{slug}}/index'
-    # media_folder: ''
-    # public_folder: ''
-
     fields:
       - label: 'Title'
         name: 'title'
@@ -28,9 +27,8 @@ collections:
         name: 'image'
         widget: 'image'
         allow_multiple: false
-        media_library:
-          config:
-            multiple: true
+        media_folder: ../../.vuepress/public/covers
+        public_folder: /covers
 
       - { label: 'Link', name: 'permalink', widget: 'string' }
       - { label: 'Sub Title', name: 'subtitle', widget: 'string', required: false }
@@ -45,4 +43,68 @@ collections:
         }
       - { label: 'Short Description', name: 'description', widget: 'string' }
       - { label: 'Tags', name: 'tags', widget: 'list', default: ['news'], allow_add: true }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+
+  - name: 'arabic_articles'
+    label: 'مقالات عربية'
+    label_singular: 'مقال عربي'
+    folder: 'articles/ar'
+    create: true
+    media_folder: ../../../.vuepress/public/uploads
+    public_folder: /uploads
+    path: '{{year}}{{month}}{{day}}-{{slug}}/index'
+    fields:
+      - label: 'Title'
+        name: 'title'
+        widget: 'string'
+
+      - label: 'Featured Image'
+        name: 'image'
+        widget: 'image'
+        allow_multiple: false
+        media_folder: ../../../.vuepress/public/covers
+        public_folder: /covers
+
+      - { label: 'Link', name: 'permalink', widget: 'string', default: 'ar/' }
+      - { label: 'Sub Title', name: 'subtitle', widget: 'string', required: false }
+      - {
+          label: 'Publish Date',
+          name: 'date',
+          widget: 'datetime',
+          dateFormat: 'YYYY-MM-DD',
+          timeFormat: 'HH:mm A',
+          format: 'YYYY-MM-DD HH:mm',
+          required: false,
+        }
+      - { label: 'Short Description', name: 'description', widget: 'string' }
+      - { label: 'Tags', name: 'tags', widget: 'list', default: ['news'], allow_add: true }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+
+
+
+  - name: 'pages'
+    label: 'Pages'
+    label_singular: 'Page'
+    folder: 'pages'
+    create: true
+    media_folder: ../../.vuepress/public/uploads
+    public_folder: /uploads
+    path: '{{slug}}/index'
+    fields:
+      - label: 'Title'
+        name: 'title'
+        widget: 'string'
+
+      - { label: 'Link', name: 'permalink', widget: 'string' }
+      - { label: 'Sub Title', name: 'subtitle', widget: 'string', required: false }
+      - {
+          label: 'Publish Date',
+          name: 'date',
+          widget: 'datetime',
+          dateFormat: 'YYYY-MM-DD',
+          timeFormat: 'HH:mm A',
+          format: 'YYYY-MM-DD HH:mm',
+          required: false,
+        }
+      - { label: 'Short Description', name: 'description', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }

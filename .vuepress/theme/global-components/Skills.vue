@@ -5,7 +5,7 @@
             class="flex items-center border rounded-full h-6 sm:h-8 px-3 mr-3 mb-3"
             :class="classesFor(skill.theme)"
         >
-            <Icon class="w-4 mr-2" primary="text-gray-500" secondary="text-gray-700" v-if="skill.icon" :icon="skill.icon"></Icon>
+            <Icon class="w-4 rtl:ml-2 ltr:mr-2" primary="text-gray-500" secondary="text-gray-700" v-if="skill.icon" :icon="skill.icon"></Icon>
             <div v-text="skill.body"></div>
         </div>
     </div>
@@ -24,7 +24,7 @@ export default {
                     return 'border-transparent bg-topaz text-white'
             
                 default:
-                    return 'text-gray-800 md:text-gray-600'
+                    return 'text-secondary'
             }
         }
     }

@@ -1,7 +1,7 @@
 <template>
 	<div class="fixed inset-0 z-40 px-4 overflow-auto" v-if="openned">
 		<div class="fixed inset-0 bg-ternary opacity-90" @click="close"></div>
-		<div class="relative mx-auto mt-8 sm:mt-20 mb-16 w-full max-w-xl">
+		<div class="relative mx-auto mt-8 sm:mt-12 mb-16 w-full max-w-xl">
 			<div class="hidden sm:block font-sans text-xl font-bold mb-2">Featured Tags</div>
 			<div class="hidden sm:grid grid-cols-3 gap-4 mb-8">
 				<a

@@ -1,18 +1,17 @@
 ---
-permalink: cv
+permalink: ar/cv
 icon: work
-title: cv
+title: السيرة الذاتية
 date: '2020-03-16 15:51'
-description: shore
+description: مختصر
 ---
-# Curriculum Vitæ
+# السيرة الذاتية
 
 I am a remote software engineer whose ambition is not to "create the next big thing" or "change the world" but rather to find my humble place in this world and enjoy every minute of the work I do. This page focuses on giving you more insights on my background.
 
 ## Skills
 
-<Skills  
-    class="mb-8"
+<Skills     class="mb-8"
     :skills="[
         { body: 'Soft', theme: 'category', icon: 'chat-group-alt' },
         { body: 'IT Consulting' },
@@ -22,35 +21,35 @@ I am a remote software engineer whose ambition is not to "create the next big th
         { body: 'Mentoring' },
         { body: 'Visual communication' },
         { body: 'Marketing' },
-        { body: 'Technical', theme: 'category', icon: 'layers' },
-        { body: 'Software engineering', theme: 'highlighted' },
-        { body: 'CI / CD' },
-        { body: 'Algorithmic optimization' },
-        { body: 'AI & machine learning' },
-        { body: 'Concurrent programming' },
-        { body: 'Network security' },
-        { body: 'Backend', theme: 'category', icon: 'server' },
-        { body: 'Laravel', theme: 'highlighted' },
-        { body: 'Symfony' },
-        { body: 'SQL' },
-        { body: 'Doctrine' },
-        { body: 'Java' },
-        { body: 'Scala' },
-        { body: 'Python' },
-        { body: 'Low-Level (C, Shell, Perl, VHDL)' },
-        { body: 'Frontend', theme: 'category', icon: 'interface' },
-        { body: 'VueJS', theme: 'highlighted' },
-        { body: 'React' },
-        { body: 'CSS Preprocessors (Sass, Less, Stylus)' },
-        { body: 'CSS Postprocessors (Tailwind CSS, PostCSS)' },
-        { body: 'Templating (Twig, Blade, Handlebars)' },
-        { body: 'Graphical', theme: 'category', icon: 'swatch' },
-        { body: 'Sketch' },
-        { body: 'Photoshop' },
-        { body: 'Illustrator' },
-        { body: 'InDesign' },
-        { body: 'AfterEffect' },
-        { body: 'Cinema4D' },
+    { body: 'Technical', theme: 'category', icon: 'layers' },
+    { body: 'Software engineering', theme: 'highlighted' },
+    { body: 'CI / CD' },
+    { body: 'Algorithmic optimization' },
+    { body: 'AI & machine learning' },
+    { body: 'Concurrent programming' },
+    { body: 'Network security' },
+    { body: 'Backend', theme: 'category', icon: 'server' },
+    { body: 'Laravel', theme: 'highlighted' },
+    { body: 'Symfony' },
+    { body: 'SQL' },
+    { body: 'Doctrine' },
+    { body: 'Java' },
+    { body: 'Scala' },
+    { body: 'Python' },
+    { body: 'Low-Level (C, Shell, Perl, VHDL)' },
+    { body: 'Frontend', theme: 'category', icon: 'interface' },
+    { body: 'VueJS', theme: 'highlighted' },
+    { body: 'React' },
+    { body: 'CSS Preprocessors (Sass, Less, Stylus)' },
+    { body: 'CSS Postprocessors (Tailwind CSS, PostCSS)' },
+    { body: 'Templating (Twig, Blade, Handlebars)' },
+    { body: 'Graphical', theme: 'category', icon: 'swatch' },
+    { body: 'Sketch' },
+    { body: 'Photoshop' },
+    { body: 'Illustrator' },
+    { body: 'InDesign' },
+    { body: 'AfterEffect' },
+    { body: 'Cinema4D' },
 ]" />
 
 

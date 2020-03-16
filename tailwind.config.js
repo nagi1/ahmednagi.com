@@ -122,6 +122,7 @@ module.exports = {
 		flexDirection: ['responsive', 'direction'],
 		margin: ['responsive', 'direction'],
 		padding: ['responsive', 'direction'],
+		borderRadius: ['responsive', 'direction'],
 	},
 	plugins: [require('tailwindcss-plugins/gradients'), require('tailwindcss-dir')()],
 	corePlugins: {
