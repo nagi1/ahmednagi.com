@@ -14,10 +14,10 @@ collections:
     folder: 'articles'
     create: true
     path: '{{year}}{{month}}{{day}}-{{slug}}/index'
-    # media_folder: '.vuepress/public/uploads'
-    # public_folder: '.vuepress/dist/assets/img'
-    media_folder: ''
-    public_folder: ''
+    media_folder: '.vuepress/public/uploads'
+    public_folder: '.vuepress/dist/assets/img'
+    # media_folder: ''
+    # public_folder: ''
 
     fields:
       - label: 'Title'
@@ -38,9 +38,6 @@ collections:
           label: 'Publish Date',
           name: 'date',
           widget: 'datetime',
-          dateFormat: 'YYYY-MM-DD',
-          timeFormat: 'HH:mm A',
-          format: 'YYYY-MM-DD HH:mm A',
           required: false,
         }
       - { label: 'Short Description', name: 'description', widget: 'string' }
