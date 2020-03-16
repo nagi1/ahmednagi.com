@@ -1,5 +1,6 @@
 ---
 permalink: learn-laravel-deployer-1
+title: Zero-downtime Laravel deployment in 5 minutes
 image: /covers/learn-laravel-deployer-1.jpg
 description: Deploying your Laravel application without any downtime just got easier. This video helps you get started in 5 minutes only.
 tags: ['Laravel', 'DevOps']

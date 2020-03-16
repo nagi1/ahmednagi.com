@@ -1,5 +1,6 @@
 ---
 permalink: learn-laravel-deployer-2
+title: Setting up a Laravel server
 image: /covers/learn-laravel-deployer-2.jpg
 description: It's set up time! Let's see how to create and configure a server that can host your Laravel application.
 tags: ['Laravel', 'DevOps']

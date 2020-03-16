@@ -1,5 +1,6 @@
 ---
-permalink: laravel-page
+permalink: laravel-pagination-with-tailwindCSS
+title: Laravel pagination with TailwindCSS
 image: /covers/laravel-pagination-with-tailwindcss.png
 description: A better way of designing your Laravel pagination links with TailwindCSS.
 tags: ['Tailwind', 'Laravel', 'Open Source']
