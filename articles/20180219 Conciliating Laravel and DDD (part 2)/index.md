@@ -1,10 +1,16 @@
 ---
-permalink: conciliating-laravel-and-ddd-part-2
-image: /covers/conciliating-laravel-and-ddd-part-2.jpg
-description: Following a Laravel and DDD friendly architecture, we tackle the challenges of allowing the Eloquent beast to enter our domain layer.
-tags: ['Domain Modeling', 'Laravel']
-date: 2018-02-19T16:08:00Z
 disqus: ghost-59df8fe74c4b014f20995452
+title: '# Conciliating Laravel and DDD (part 2)'
+permalink: conciliating-laravel-and-ddd-part-2
+subtitle: subtitle
+date: 2018-02-19T16:08:00.000Z
+image: /covers/conciliating-laravel-and-ddd-part-2.jpg
+description: >-
+  Following a Laravel and DDD friendly architecture, we tackle the challenges of
+  allowing the Eloquent beast to enter our domain layer.
+tags:
+  - Domain Modeling
+  - Laravel
 ---
 
 # Conciliating Laravel and DDD (part 2)
