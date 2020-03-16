@@ -35,7 +35,6 @@ module.exports = {
 		'seo',
 		'disqus',
 		require('./extendPageData.js'),
-		'@silvanite/tailwind',
 	],
 	enhanceAppFiles: [path.resolve(__dirname, 'articles.js'), path.resolve(__dirname, 'search.js')],
 };

@@ -1,3 +1,5 @@
+const whitelister = require('purgecss-whitelister');
+
 module.exports = {
 	title: 'Ahmed Nagi',
 	locales: {
@@ -12,6 +14,19 @@ module.exports = {
 			description: 'Dev Blog',
 		},
 	},
+	plugins: [
+		[
+			'@silvanite/tailwind',
+			{
+				purgecss: {
+					enabled: true,
+					purgecssOptions: {
+						whitelist: whitelister('./node_modules/prismjs/themes/prism-okaidia.css'),
+					},
+				},
+			},
+		],
+	],
 	themeConfig: {
 		domain: 'https://ahmednagi.com',
 
@@ -47,8 +62,5 @@ module.exports = {
 
 	markdown: {
 		toc: { includeLevel: [1, 2, 3] },
-	},
-	purgecss: {
-		whitelistPatterns: [/\blanguage/],
 	},
 };

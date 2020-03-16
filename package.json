@@ -35,7 +35,8 @@
     "vuepress-plugin-seo": "^0.1.2"
   },
   "dependencies": {
-    "@silvanite/vuepress-plugin-tailwind": "^1.2.0",
+    "@silvanite/vuepress-plugin-tailwind": "https://github.com/nagi1/vuepress-plugin-tailwind",
+    "purgecss-whitelister": "^2.4.0",
     "vue-cookies": "^1.7.0"
   }
 }

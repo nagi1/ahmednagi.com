@@ -85,13 +85,15 @@ inverse-style(prop, value, inverse-prop, default-value) {
 
 /*! purgecss end ignore */
 
-@require '~prismjs/themes/prism-okaidia.css'
 @require 'palette'
 @require 'typography'
 @require 'links'
 @require 'tables'
-@require 'code'
 @require 'ribbons'
 
+/*! purgecss start ignore */
+@import '~prismjs/themes/prism-okaidia.css'
+@require 'code'
 @require 'container'
 @require 'content'
+/*! purgecss end ignore */
