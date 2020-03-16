@@ -1,3 +1,5 @@
+/*! purgecss start ignore */
+
 $codeBackground = #223140
 $codeColor = #f7fafc
 $codeHighlightBackground = rgba(0, 0, 0, 66%)
@@ -85,3 +87,5 @@ for lang in $langMap
     div{'[class~="language-' + lang[0] + '"]'}
         &:before
             content ('' + lang[1])
+            
+/*! purgecss end ignore */
