@@ -2,9 +2,8 @@
 	<div class="flex flex-wrap items-start px-5 justify-between bg-primary">
 		<!-- Text Section -->
 		<div class="flex w-1/2 flex-wrap justify-start  items-end mt-5">
-			<p class="text-secondary">{{ footerText1 }}</p>
 			<p class="text-secondary" style="direction:ltr;">
-				Powerd By <a href="https://Vuepress.vuejs.org" target="_blank">Vuepress</a>. Proudly hosted with GitHub and
+				Ahmed Nagi - Powerd By <a href="https://Vuepress.vuejs.org" target="_blank">Vuepress</a>. hosted with <a href="https://www.github.com/" target="_blank">GitHub</a> and
 				<a href="https://www.netlify.com/" target="_blank">Netlify</a>.
 			</p>
 		</div>
@@ -41,14 +40,6 @@
 
 <script>
 	export default {
-		computed: {
-			footerText1() {
-				if (this.$lang === 'en') {
-					return `© Ahmednagi.com ${new Date().getFullYear()} All rights reserved.`;
-				} else {
-					return `جميع الحقوق محفوظة © Ahmednagi.com ${new Date().getFullYear()}`;
-				}
-			},
-		},
+
 	};
 </script>

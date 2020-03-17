@@ -12,6 +12,8 @@
             <Content />
         </article>
 
+
+
         <!-- Subscription form. -->
         <div class="bg-secondary pt-8 py-8">
             <div class="container">
@@ -21,7 +23,8 @@
 
         <!-- Disqus. -->
         <div class="bg-primary py-16">
-            <div class="container">
+            <div class="container py-4 sm:py-8">
+                <h2>{{ $lang === 'ar' ? 'التعليقات' : 'Comments' }}</h2>
                 <Disqus 
                     shortname="loris-leiva" 
                     :title="$page.title"
@@ -34,7 +37,7 @@
         <!-- Related articles. -->
         <div v-if="relatedArticles.length >= 2" class="bg-primary">
             <div class="container py-4 sm:py-8">
-                <h2>Related articles</h2>
+                <h2>{{ $lang === 'ar' ? 'اقرأ ايضا' : 'Related articles' }}</h2>
                 <div class="flex flex-wrap -mx-5">
                     <ArticleCard 
                         v-for="article in relatedArticles" 
