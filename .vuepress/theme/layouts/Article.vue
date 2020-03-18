@@ -26,7 +26,7 @@
             <div class="container py-4 sm:py-8">
                 <h2>{{ $lang === 'ar' ? 'التعليقات' : 'Comments' }}</h2>
                 <Disqus 
-                    shortname="loris-leiva" 
+                    shortname="ahmednagi" 
                     :title="$page.title"
                     :identifier="disqusIdentifier" 
                     :url="disqusUrl"

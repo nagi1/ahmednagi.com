@@ -14,11 +14,11 @@
 				<div class="flex items-center  py-3 bg-primary">
 					<div class="mx-16 flex justify-around w-full">
 						<dark-switcher class="ltr:mr-3 rtl:ml-3"/>
-						<router-link
-							class="no-underline text-secondary font-semibold text-lg hover:text-linkHover hover:underline font-semibold"
-							:to="langLink.href"
-							>{{ langLink.text }}</router-link
-						>
+							<router-link
+								class="no-underline text-secondary font-semibold text-lg hover:text-linkHover hover:underline font-semibold"
+								:to="langLink.href"
+								>{{ langLink.text }}</router-link
+							>
 					</div>
 				</div>
 				<component :is="layout" />
