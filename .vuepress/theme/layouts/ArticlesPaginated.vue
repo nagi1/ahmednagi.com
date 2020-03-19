@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-white">
+    <div class="bg-primary">
         <div class="container-xl">
             <Header :subtitle="subtitle" />
             <ArticleGrid :articles="articles" />
