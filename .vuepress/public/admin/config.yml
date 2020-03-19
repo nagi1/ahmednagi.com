@@ -28,6 +28,7 @@ collections:
         allow_multiple: false
         media_folder: /.vuepress/public/covers
         public_folder: /covers
+        required: false
 
       - { label: 'Link', name: 'permalink', widget: 'string' }
       - { label: 'Sub Title', name: 'subtitle', widget: 'string', required: false }
@@ -63,6 +64,7 @@ collections:
         allow_multiple: false
         media_folder: /.vuepress/public/covers
         public_folder: /covers
+        required: false
 
       - { label: 'Link', name: 'permalink', widget: 'string', default: 'ar/' }
       - { label: 'Sub Title', name: 'subtitle', widget: 'string', required: false }
@@ -125,6 +127,7 @@ collections:
         allow_multiple: false
         media_folder: /.vuepress/public/covers
         public_folder: /covers
+        required: false
 
       - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'issue' }
       - { label: 'Link', name: 'permalink', widget: 'string', default: 'issue/' }
