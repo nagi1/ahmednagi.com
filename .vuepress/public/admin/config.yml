@@ -5,7 +5,7 @@ backend:
 local_backend: true
 publish_mode: editorial_workflow
 
-media_folder: .vuepress/public/uploads
+media_folder: /.vuepress/public/uploads
 public_folder: /uploads
 
 collections:
@@ -14,7 +14,7 @@ collections:
     label_singular: 'Article'
     folder: 'articles'
     create: true
-    media_folder: ../../.vuepress/public/uploads
+    media_folder: /.vuepress/public/uploads
     public_folder: /uploads
     path: '{{year}}{{month}}{{day}}-{{slug}}/index'
     fields:
@@ -26,7 +26,7 @@ collections:
         name: 'image'
         widget: 'image'
         allow_multiple: false
-        media_folder: ../../.vuepress/public/covers
+        media_folder: /.vuepress/public/covers
         public_folder: /covers
 
       - { label: 'Link', name: 'permalink', widget: 'string' }
@@ -49,7 +49,7 @@ collections:
     label_singular: 'مقال عربي'
     folder: 'articles/ar'
     create: true
-    media_folder: ../../../.vuepress/public/uploads
+    media_folder: /.vuepress/public/uploads
     public_folder: /uploads
     path: '{{year}}{{month}}{{day}}-{{slug}}/index'
     fields:
@@ -61,7 +61,7 @@ collections:
         name: 'image'
         widget: 'image'
         allow_multiple: false
-        media_folder: ../../../.vuepress/public/covers
+        media_folder: /.vuepress/public/covers
         public_folder: /covers
 
       - { label: 'Link', name: 'permalink', widget: 'string', default: 'ar/' }
@@ -84,7 +84,7 @@ collections:
     label_singular: 'Page'
     folder: 'pages'
     create: true
-    media_folder: ../../.vuepress/public/uploads
+    media_folder: /.vuepress/public/uploads
     public_folder: /uploads
     path: '{{slug}}/index'
     fields:
@@ -111,7 +111,7 @@ collections:
     label_singular: 'Issue'
     folder: 'issues'
     create: true
-    media_folder: ../../.vuepress/public/uploads
+    media_folder: /.vuepress/public/uploads
     public_folder: /uploads
     path: '{{year}}{{month}}{{day}}-{{slug}}/index'
     fields:
@@ -123,7 +123,7 @@ collections:
         name: 'image'
         widget: 'image'
         allow_multiple: false
-        media_folder: ../../.vuepress/public/covers
+        media_folder: /.vuepress/public/covers
         public_folder: /covers
 
       - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'issue' }
