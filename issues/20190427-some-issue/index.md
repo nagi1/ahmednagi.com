@@ -4,7 +4,6 @@ title: Some Issue
 image: /covers/laravel-pagination-with-tailwindcss.png
 tags: ['Tailwind', 'Laravel', 'Open Source', 'issue']
 date: 2019-03-22T21:56:00Z
-subtitle: subtitle
 layout: issue
 ---
 # Some Issue
