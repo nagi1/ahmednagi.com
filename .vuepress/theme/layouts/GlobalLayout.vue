@@ -112,7 +112,9 @@
 				Bus.$emit('dark', this.dark);
 			},
 		},
-		created() {},
+		created() {
+			// console.log(this.$site);
+		},
 
 		mounted() {
 			this.shared();

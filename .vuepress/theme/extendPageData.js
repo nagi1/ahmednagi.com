@@ -24,7 +24,10 @@ function classify(page) {
     page.isArticle =
 			page.regularPath.startsWith('/articles/') &&
 			page.regularPath !== '/articles/' &&
-			page.frontmatter.layout !== 'ArticlesAll';
+            page.frontmatter.layout !== 'ArticlesAll' &&
+            page.frontmatter.layout !== 'Issue' &&
+            page.frontmatter.layout !== 'IssuesAll';
+
     page.isTag = page.regularPath.startsWith('/tag/')
     page.isSearchable = page.regularPath.indexOf('/page/') === -1
 }

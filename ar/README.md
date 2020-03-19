@@ -1,9 +1,8 @@
 ---
 title: احمد ناجي
-metaTitle: الصفحة الرئيسية
-subtitle: نعم
+metaTitle: احمد ناجي - الرئيسية
+subtitle: المدونة الشخصية
 searchableTitle: Home
 icon: home
 layout: Home
-tags: []
 ---

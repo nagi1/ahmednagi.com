@@ -108,7 +108,7 @@
 			},
 			featuredTags() {
 				const laravelTag = this.$tag.list.find(tag => tag.name === 'Laravel');
-				const vueTag = this.$tag.list.find(tag => tag.name === 'Vue');
+				const issueTag = this.$tag.list.find(tag => tag.name === 'issue');
 				return [
 					{
 						name: 'Laravel',
@@ -117,10 +117,10 @@
 						classes: 'bg-topaz text-white',
 					},
 					{
-						name: 'Vue',
-						count: vueTag.pages.length,
-						path: vueTag.path,
-						classes: 'bg-emerald text-white',
+						name: 'Issues',
+						count: issueTag.pages.length,
+						path: 'all/issues',
+						classes: 'bg-purple-600 text-white',
 					},
 					{
 						name: 'See all tags',
@@ -175,6 +175,7 @@
 			},
 		},
 		mounted() {
+			console.log(this.menu);
 			const keyboardHandler = e => {
 				if (e.key === '/' && !this.openned) {
 					e.preventDefault();

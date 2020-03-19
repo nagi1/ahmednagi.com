@@ -6,6 +6,9 @@ export default ({ Vue }) => {
 			$articles() {
 				return this.$site.pages.filter(page => page.isArticle && this.$lang === page.lang).sort(sortByDate);
 			},
+			$issues() {
+				return this.$site.pages.filter(page => page.frontmatter.layout === 'issue').sort(sortByDate);
+			},
 			$featuredArticles() {
 				const { featuredArticles, minimumFeaturedArticles } = this.$themeConfig;
 				let featured = fetchPagesInArray(this.$articles, featuredArticles);

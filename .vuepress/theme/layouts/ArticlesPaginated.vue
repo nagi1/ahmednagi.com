@@ -17,7 +17,7 @@ export default {
     components: { Header, ArticleGrid, Pagination },
     computed: {
         articles () {
-            return this.$pagination.pages
+            return this.$pagination.pages;
         },
         subtitle () {
             if (this.$pagination && this.$pagination.paginationIndex > 0) {

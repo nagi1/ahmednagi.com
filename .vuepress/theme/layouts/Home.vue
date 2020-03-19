@@ -13,6 +13,10 @@
                     <Icon icon="star" class="w-6" secondary="text-white" primary="text-brand" />
                 </div>
                 <router-link class="text-primary text-lg font-semibold" :to="all.link">{{ all.text }}</router-link>
+                <div class="px-2 py-2">
+                    <Icon icon="star" class="w-6" secondary="text-white" primary="text-brand" />
+                </div>
+                <router-link class="text-primary text-lg font-semibold" :to="issues.link">{{ issues.text }}</router-link>
             </div>
         </div>
     </div>
@@ -39,8 +43,14 @@ export default {
 
         all() {
             return {
-                text: this.$lang === 'ar' ? 'استعراض جميع المقالات' : 'List all articles',
+                text: this.$lang === 'ar' ? 'تصفح كل المقالات' : 'List all articles',
                 link: this.$lang === 'ar' ? '/ar/all' : '/all',
+            }
+        },
+        issues() {
+            return {
+                text: this.$lang === 'ar' ? 'تصفح حلول المشاكل' : 'List all issues',
+                link: '/all/issues/',
             }
         }
     }

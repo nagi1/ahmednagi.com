@@ -35,6 +35,7 @@ export default {
             if (tag.name === 'Laravel') return 'bg-topaz text-white'
             if (tag.name === 'Tailwind') return 'bg-river text-white'
             if (tag.name === 'Vue' || tag.name === 'Vuepress') return 'bg-emerald text-white'
+            if (tag.name === 'issue' || tag.name === 'issues') return 'bg-purple-600 text-white'
             return 'bg-moonlight text-gray-700'
         },
         gridClassesFor (index) {
