@@ -6,7 +6,7 @@ module.exports = {
 		'/ar/': {
 			lang: 'ar',
 			title: 'احمد ناجي',
-			description: 'مدونة',
+			description: 'مدونة مطور',
 		},
 		'/': {
 			lang: 'en',
@@ -31,7 +31,7 @@ module.exports = {
 		domain: 'https://ahmednagi.com',
 
 		repo: 'https://github.com/nagi1/ahmednagi.com',
-		nav: ['/', '/tag/', '/all/issues/', '/all/', '/cv/'],
+		nav: ['/', '/tag/', '/all/issues/', '/all/', '/work/', '/ar/work/'],
 		author: {
 			name: 'Ahmed Nagi',
 			twitter: '@nagiworks',

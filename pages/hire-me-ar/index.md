@@ -1,14 +1,13 @@
 ---
-title: Hire Me
-permalink: work
-subtitle: CV
+title: CV
+permalink: ar/work
+subtitle: النسخة العربية
 date: '2020-03-19 17:28'
 description: >-
-  I am working remotely and currently looking for job. I specialize more in the
-  backend side using Laravel and frontend using Vuejs
+  شغال اونلاين وحاليا بدور على شغل, بتخصص اكتر في البرمجة بال php باستخدام Laravel و Vuejs
 ---
 
- I am working remotely and currently looking for job. I specialize more in the **backend** side using **Laravel** and **frontend** using **Vuejs**.
+  شغال اونلاين وحاليا بدور على شغل, بتخصص اكتر في البرمجة بال **php** باستخدام **Laravel** و **Vuejs**.
 
 ## My Work
 
