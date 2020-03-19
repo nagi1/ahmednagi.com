@@ -9,7 +9,6 @@ media_folder: .vuepress/public/uploads
 public_folder: /uploads
 
 collections:
-
   - name: 'articles'
     label: 'Articles'
     label_singular: 'Article'
@@ -80,8 +79,6 @@ collections:
       - { label: 'Tags', name: 'tags', widget: 'list', default: ['news'], allow_add: true }
       - { label: 'Body', name: 'body', widget: 'markdown' }
 
-
-
   - name: 'pages'
     label: 'Pages'
     label_singular: 'Page'
@@ -109,7 +106,6 @@ collections:
       - { label: 'Short Description', name: 'description', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
 
-
   - name: 'issues'
     label: 'Issues'
     label_singular: 'Issue'
@@ -130,6 +126,7 @@ collections:
         media_folder: ../../.vuepress/public/covers
         public_folder: /covers
 
+      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'issue' }
       - { label: 'Link', name: 'permalink', widget: 'string', default: 'issue/' }
       - { label: 'Sub Title', name: 'subtitle', widget: 'string', required: false }
       - {
