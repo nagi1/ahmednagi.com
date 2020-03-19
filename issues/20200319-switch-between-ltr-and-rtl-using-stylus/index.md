@@ -1,6 +1,6 @@
 ---
 title: Switch between LTR and RTL using stylus
-image: /covers/2020-03-14-07_51_42-dalil-3.csv-read-only-excel.png
+image: /covers/rtl-ltr.png
 layout: issue
 permalink: issue/stylus-switch-direction
 date: '2020-03-19 16:00'
