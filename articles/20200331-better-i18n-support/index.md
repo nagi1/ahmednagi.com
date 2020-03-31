@@ -9,19 +9,19 @@ description: >-
   specially Arabic.
 tags:
   - i18n
-  - localization
   - javascript
   - snippets
 ---
-Working with different languages can be challenging. Specially languages that have multiple references to different things i.e. **gender** or **numbers**.
+Working with different languages can be challenging. Specially languages that have multiple references to different things like **gender.**
 
-Languages like **Arabic** refers to the words as a **female** or **male** depends on the context and the grammar.\
-In English when we refer to gender we say *(I'll till her / him)* in Arabic we say *(سوف اقول له)* for male, *(سوف اقول لها)* for female, and managing this in a template language using if statements can be tedious.
+Languages like **Arabic** reference words as **male** or **female** depends on the context and grammar.\
+In English when we refer to gender we say *(I'll till her / him)* in Arabic we say *(سوف اقول له)* for male, *(سوف اقول لها)* for female. 
 
-## Let's dive in
+Managing this in a template using if statements can be tedious.
+
+## This little snippet may help you
 
 ```javascript
-
 /**
 * Gender reference
 * defaults to male refernce if gender is undefined
@@ -35,14 +35,9 @@ function gr(gender, maleRef, femaleRef) {
 
         return maleRef;
 }
-
-
 ```
 
-
-
 ```javascript
-
 /**
 * Usage
 **/
