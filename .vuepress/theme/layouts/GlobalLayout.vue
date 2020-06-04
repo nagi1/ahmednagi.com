@@ -11,14 +11,14 @@
 			<MenuButton @click="$refs.navigator.open()" />
 
 			<div class="flex flex-col">
-				<div class="flex items-center  py-3 bg-primary">
-					<div class="mx-16 flex justify-around w-full">
-						<dark-switcher class="ltr:mr-3 rtl:ml-3"/>
-							<router-link
-								class="no-underline text-secondary font-semibold text-lg hover:text-linkHover hover:underline font-semibold"
-								:to="langLink.href"
-								>{{ langLink.text }}</router-link
-							>
+				<div class="flex items-center py-3 bg-body">
+					<div class="flex justify-center w-full">
+						<dark-switcher class="ltr:mr-3 rtl:ml-3" />
+						<router-link
+							class="no-underline text-secondary font-semibold text-lg hover:text-linkHover hover:underline font-semibold"
+							:to="langLink.href"
+							>{{ langLink.text }}</router-link
+						>
 					</div>
 				</div>
 				<component :is="layout" />
@@ -118,7 +118,7 @@
 
 		mounted() {
 			this.shared();
-			Bus.$on('dark', mode => this.setDark(mode));
+			Bus.$on('dark', (mode) => this.setDark(mode));
 			this.setDarkFromCookie();
 		},
 
@@ -138,17 +138,17 @@
 
 				// get page in another language
 				const pageLang = this.$site.pages.filter(
-					page => currentPageSlug === this.SlugWithoutLocale(page.path) && this.$page.key !== page.key,
+					(page) => currentPageSlug === this.SlugWithoutLocale(page.path) && this.$page.key !== page.key,
 				);
 
 				const link = {};
 
 				if (pageLang.length < 1) {
 					link.href = this.$lang === 'en' ? '/ar/' : '/';
-					link.text = this.$lang === 'en' ? 'النسخة العربية' : 'English';
+					link.text = this.$lang === 'en' ? 'بالعربي' : 'English';
 				} else {
 					link.href = pageLang[0].path;
-					const langText = this.$lang === 'en' ? 'اقرء النسخة العربية - ' : 'English - ';
+					const langText = this.$lang === 'en' ? 'بالعربي - ' : 'English - ';
 					link.text = langText + pageLang[0].title;
 				}
 

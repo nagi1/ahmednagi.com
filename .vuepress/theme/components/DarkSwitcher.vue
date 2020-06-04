@@ -25,7 +25,7 @@
 		},
 
 		created() {
-			Bus.$on('dark', mode => {
+			Bus.$on('dark', (mode) => {
 				this.dark = mode;
 			});
 		},
@@ -49,7 +49,7 @@
 	}
 
 	/* The slider */
-	.slider {
+	/* .slider {
 		position: absolute;
 		cursor: pointer;
 		top: 0;
@@ -59,7 +59,7 @@
 		background-color: #ccc;
 		-webkit-transition: 0.4s;
 		transition: 0.4s;
-	}
+	} */
 
 	.slider:before {
 		position: absolute;
@@ -79,18 +79,18 @@
 		background-position: center;
 	}
 
-	input:checked + .slider {
+	/* input:checked + .slider {
 		background-color: #2196f3;
 	}
 
 	input:focus + .slider {
 		box-shadow: 0 0 1px #2196f3;
-	}
+	} */
 
 	input:checked + .slider:before {
-		-webkit-transform: translateX(24px);
+		/* -webkit-transform: translateX(24px);
 		-ms-transform: translateX(24px);
-		transform: translateX(24px);
+		transform: translateX(24px); */
 		background: white url('https://i.ibb.co/7JfqXxB/sunny.png');
 		background-repeat: no-repeat;
 		background-position: center;

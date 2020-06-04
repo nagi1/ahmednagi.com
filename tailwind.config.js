@@ -2,7 +2,7 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
 	theme: {
-		textColor: theme => ({
+		textColor: (theme) => ({
 			primary: 'var(--color-text-primary)',
 			secondary: 'var(--color-text-secondary)',
 			ternary: 'var(--color-text-ternary)',
@@ -12,7 +12,7 @@ module.exports = {
 
 			...theme('colors'),
 		}),
-		backgroundColor: theme => ({
+		backgroundColor: (theme) => ({
 			body: 'var(--color-bg-body)',
 
 			primary: 'var(--color-bg-primary)',
@@ -22,7 +22,7 @@ module.exports = {
 			...theme('colors'),
 		}),
 
-		borderColor: theme => ({
+		borderColor: (theme) => ({
 			...theme('backgroundColor'),
 			...theme('colors'),
 			borderPrimary: 'var(--color-border-primary)',
@@ -106,7 +106,7 @@ module.exports = {
 				'90': '0.9',
 			},
 		},
-		gradients: theme => ({
+		gradients: (theme) => ({
 			topaz: ['30deg', '#EE7752', '#E73C7E'],
 			river: ['30deg', '#23A6D5', '#23D5AB'],
 			emerald: ['30deg', theme('colors.green.400'), theme('colors.teal.600')],
@@ -123,6 +123,7 @@ module.exports = {
 		margin: ['responsive', 'direction'],
 		padding: ['responsive', 'direction'],
 		borderRadius: ['responsive', 'direction'],
+		inset: ['responsive', 'hover', 'focus', 'direction'],
 	},
 	plugins: [require('tailwindcss-plugins/gradients'), require('tailwindcss-dir')()],
 	corePlugins: {

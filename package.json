@@ -1,42 +1,43 @@
 {
-  "name": "ahmednagi.com",
-  "author": "Ahmed Nagi",
-  "description": "Personal website and blog",
-  "version": "0.1.0",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nagi1/ahmednagi.com.git"
-  },
-  "keywords": [
-    "laravel",
-    "vuejs",
-    "vuepress",
-    "php",
-    "blog"
-  ],
-  "scripts": {
-    "watch": "npm run dev",
-    "dev": "vuepress dev",
-    "build": "vuepress build"
-  },
-  "devDependencies": {
-    "@vue/babel-preset-app": "^4.2.2",
-    "@vuepress/plugin-blog": "^1.9.2",
-    "@vuepress/plugin-google-analytics": "^1.3.0",
-    "autoprefixer": "^9.7.4",
-    "moment": "^2.24.0",
-    "svg-inline-loader": "^0.8.0",
-    "tailwindcss": "^1.2.0",
-    "tailwindcss-dir": "^4.0.0",
-    "tailwindcss-plugins": "^0.3.0",
-    "vuepress": "^1.3.0",
-    "vuepress-plugin-disqus": "^0.2.0",
-    "vuepress-plugin-seo": "^0.1.2"
-  },
-  "dependencies": {
-    "@silvanite/vuepress-plugin-tailwind": "https://github.com/nagi1/vuepress-plugin-tailwind#dist",
-    "purgecss-whitelister": "^2.4.0",
-    "vue-cookies": "^1.7.0"
-  }
+	"name": "ahmednagi.com",
+	"author": "Ahmed Nagi",
+	"description": "Personal website and blog",
+	"version": "0.2.0",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/nagi1/ahmednagi.com.git"
+	},
+	"keywords": [
+		"laravel",
+		"vuejs",
+		"vuepress",
+		"php",
+		"blog"
+	],
+	"scripts": {
+		"watch": "npm run dev",
+		"dev": "vuepress dev",
+		"build": "vuepress build",
+		"local-admin": "npx netlify-cms-proxy-server"
+	},
+	"devDependencies": {
+		"@vue/babel-preset-app": "^4.2.2",
+		"@vuepress/plugin-blog": "^1.9.2",
+		"@vuepress/plugin-google-analytics": "^1.3.0",
+		"autoprefixer": "^9.7.4",
+		"moment": "^2.24.0",
+		"svg-inline-loader": "^0.8.0",
+		"tailwindcss": "^1.2.0",
+		"tailwindcss-dir": "^4.0.0",
+		"tailwindcss-plugins": "^0.3.0",
+		"vuepress": "^1.3.0",
+		"vuepress-plugin-disqus": "^0.2.0",
+		"vuepress-plugin-seo": "^0.1.2"
+	},
+	"dependencies": {
+		"@silvanite/vuepress-plugin-tailwind": "https://github.com/nagi1/vuepress-plugin-tailwind#dist",
+		"purgecss-whitelister": "^2.4.0",
+		"vue-cookies": "^1.7.0"
+	}
 }

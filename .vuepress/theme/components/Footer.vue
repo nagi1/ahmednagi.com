@@ -1,15 +1,8 @@
 <template>
-	<div class="flex flex-wrap items-start px-5 justify-between bg-primary">
-		<!-- Text Section -->
-		<div class="flex w-1/2 flex-wrap justify-start  items-end mt-5">
-			<p class="text-secondary" style="direction:ltr;">
-				Ahmed Nagi - Powerd By <a href="https://Vuepress.vuejs.org" target="_blank">Vuepress</a>. hosted with <a href="https://www.github.com/" target="_blank">GitHub</a> and
-				<a href="https://www.netlify.com/" target="_blank">Netlify</a>.
-			</p>
-		</div>
-
+	<!-- <div class="flex flex-wrap items-start px-5 justify-between bg-primary"> -->
+	<div class="flex flex-col bg-primary">
 		<!-- Icons -->
-		<div class="flex w-1/2 justify-end mt-5">
+		<div class="flex justify-center mt-5">
 			<!-- Twitter -->
 			<a href="https://twitter.com/nagiworks" class="text-primary hover:text-blue-500 border-0 mx-2">
 				<svg class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -35,11 +28,19 @@
 				</svg>
 			</a>
 		</div>
+
+		<!-- Text Section -->
+		<!-- <div class="flex w-1/2 flex-wrap justify-start items-end mt-5"> -->
+		<div class="text-center mt-5">
+			<p class="text-secondary" style="direction: ltr;">
+				Ahmed Nagi - Powerd By <a href="https://Vuepress.vuejs.org" target="_blank">Vuepress</a>. hosted with
+				<a href="https://www.github.com/" target="_blank">GitHub</a> and
+				<a href="https://www.netlify.com/" target="_blank">Netlify</a>.
+			</p>
+		</div>
 	</div>
 </template>
 
 <script>
-	export default {
-
-	};
+	export default {};
 </script>
