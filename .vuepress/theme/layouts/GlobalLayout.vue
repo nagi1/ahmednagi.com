@@ -14,11 +14,7 @@
 				<div class="flex items-center py-3 bg-body">
 					<div class="flex justify-center w-full">
 						<dark-switcher class="ltr:mr-3 rtl:ml-3" />
-						<router-link
-							class="no-underline text-secondary font-semibold text-lg hover:text-linkHover hover:underline font-semibold"
-							:to="langLink.href"
-							>{{ langLink.text }}</router-link
-						>
+						<router-link class="no-underline text-secondary font-semibold text-lg hover:text-linkHover hover:underline font-semibold" :to="langLink.href">{{ langLink.text }}</router-link>
 					</div>
 				</div>
 				<component :is="layout" />
@@ -83,7 +79,8 @@
 
 			setDark(mode) {
 				this.dark = mode;
-				this.$cookies.set('dark', mode, '7d');
+				this.$cookies.set('dark', mode, '7d', null, null, null, 'Lax');
+				// this.$cookies.set('dark', mode, '7d');
 			},
 
 			cleanSlug(url) {
@@ -137,9 +134,7 @@
 				const currentPageSlug = this.SlugWithoutLocale(this.$page.path);
 
 				// get page in another language
-				const pageLang = this.$site.pages.filter(
-					(page) => currentPageSlug === this.SlugWithoutLocale(page.path) && this.$page.key !== page.key,
-				);
+				const pageLang = this.$site.pages.filter((page) => currentPageSlug === this.SlugWithoutLocale(page.path) && this.$page.key !== page.key);
 
 				const link = {};
 
