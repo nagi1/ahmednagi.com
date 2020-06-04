@@ -1,6 +1,18 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
+	purge: {
+		content: [
+			'./.vuepress/theme/**/*.html',
+			'./.vuepress/**/*.vue',
+			'./.vuepress/theme/**/*.jsx',
+			'./.vuepress/theme/**/*.styl',
+			'./.vuepress/theme/**/*.md',
+			'./.vuepress/theme/**/*.js',
+			'./.vuepress/theme/**/*.css',
+			'./node_modules/prismjs/themes/prism-okaidia.css',
+		],
+	},
 	theme: {
 		textColor: (theme) => ({
 			primary: 'var(--color-text-primary)',

@@ -851,9 +851,10 @@
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.3.tgz#2b5a3ab3f918cca48a8c754c08168e3f03eba61b"
   integrity sha512-shAmDyaQC4H92APFoIaVDHCx5bStIocgvbwQyxPRrbUY20V1EYTbSDchWbuwlMG3V17cprZhA6+78JfB+3DTPw==
 
-"@silvanite/vuepress-plugin-tailwind@https://github.com/nagi1/vuepress-plugin-tailwind#dist":
-  version "1.2.0"
-  resolved "https://github.com/nagi1/vuepress-plugin-tailwind#8e0aa23379acbd0629c858d74eefd6a273e0e145"
+"@silvanite/vuepress-plugin-tailwind@^1.3.0":
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@silvanite/vuepress-plugin-tailwind/-/vuepress-plugin-tailwind-1.3.0.tgz#4ba9b479ce44dd2102c82645dcaeac6ee3effa06"
+  integrity sha512-/sWKj36nKaJrEf6AATB7FtvLLSVgo/JDWMDWmAlB2w3L/G17iIsvrT2g3F6Xwh1NdYKK4AyiYDcnAQ0yn7i1ag==
   dependencies:
     "@fullhuman/postcss-purgecss" "^1.3.0"
     lodash "^4.17.15"
