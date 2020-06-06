@@ -113,7 +113,7 @@
 					{
 						name: 'Issues',
 						count: issueTag.pages.length,
-						path: 'all/issues',
+						path: '/all/issues',
 						classes: 'bg-purple-600 text-white',
 					},
 					{
