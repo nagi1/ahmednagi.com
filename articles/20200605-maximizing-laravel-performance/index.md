@@ -275,4 +275,4 @@ We only loads **15 users** records and **15 login** records which exactly what w
 
 You might be wondering if we could have avoided all of these work by simply add hasOne relationship with an order, but that will reintroduce previous problems again and that makes sense, since laravel can't set a limit when eager loading relationships if we force limit on the hasOne relationship laravel will only get one last_login for the last user.
 
-<div class="rounded bg-orange-200 border border-orange-300 p-3 w-full text-gray-900">This Great tips are inspired by <a class="text-xl font-semibold" href="https://reinink.ca/">Jonathan Reinink's</a> <a class="text-xl font-semibold" href="https://eloquent-course.reinink.ca/">Eloquent patterns course</a> it's a wonderful course, I learned a lot from it :)</div>
+This Great tips inspired by [Jonathan Reinink's](https://reinink.ca/) [Eloquent patterns course](https://eloquent-course.reinink.ca/) it's a wonderful course, I learned a lot from it :)
