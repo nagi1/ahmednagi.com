@@ -32,7 +32,12 @@ module.exports = {
 				},
 			},
 		],
-		'seo',
+		[
+			'seo',
+			{
+				image: ($page, $site) => $site.themeConfig.domain + $page.frontmatter.image,
+			},
+		],
 		'disqus',
 		require('./extendPageData.js'),
 	],

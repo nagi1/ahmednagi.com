@@ -101,8 +101,8 @@
 				return fetchPagesInArray(this.$site.pages, this.$site.themeConfig.nav);
 			},
 			featuredTags() {
-				const laravelTag = this.$tag.list.find((tag) => tag.name === 'Laravel');
-				const issueTag = this.$tag.list.find((tag) => tag.name === 'issue');
+				const laravelTag = this.$tag.list.find((tag) => tag.name === 'laravel');
+				const snippetTag = this.$tag.list.find((tag) => tag.name === 'snippet');
 				return [
 					{
 						name: 'Laravel',
@@ -111,9 +111,9 @@
 						classes: 'bg-topaz text-white',
 					},
 					{
-						name: 'Issues',
-						count: issueTag.pages.length,
-						path: '/all/issues',
+						name: 'Snippets',
+						count: snippetTag.pages.length,
+						path: '/all/snippets',
 						classes: 'bg-purple-600 text-white',
 					},
 					{

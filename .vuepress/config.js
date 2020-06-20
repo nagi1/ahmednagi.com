@@ -1,5 +1,3 @@
-// const whitelister = require('purgecss-whitelister');
-
 module.exports = {
 	title: 'Ahmed Nagi',
 	locales: {
@@ -17,24 +15,12 @@ module.exports = {
 	postcss: {
 		plugins: [require('tailwindcss')('./tailwind.config.js'), require('autoprefixer')],
 	},
-	plugins: [
-		// [
-		// 	'@silvanite/tailwind',
-		// 	{
-		// 		purgecss: {
-		// 			enabled: true,
-		// 			purgecssOptions: {
-		// 				whitelist: whitelister('./node_modules/prismjs/themes/prism-okaidia.css'),
-		// 			},
-		// 		},
-		// 	},
-		// ],
-	],
+
 	themeConfig: {
 		domain: 'https://ahmednagi.com',
 
 		repo: 'https://github.com/nagi1/ahmednagi.com',
-		nav: ['/', '/tag/', '/all/issues/', '/all/', '/work/', '/ar/work/'],
+		nav: ['/', '/tag/', '/all/snippets/', '/all/', '/work/', '/ar/work/'],
 		author: {
 			name: 'Ahmed Nagi',
 			twitter: '@nagiworks',

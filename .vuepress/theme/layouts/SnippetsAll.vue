@@ -7,7 +7,7 @@
 		<div class="container mb-16">
 			<router-link
 				:to="article.path"
-				v-for="article in $issues"
+				v-for="article in $snippets"
 				:key="article.key"
 				class="m-0 block hover:bg-blackrock hover:no-underline hover:text-white px-4 py-2 rounded-lg cursor-pointer border-0"
 			>
@@ -29,6 +29,5 @@
 				return relativeDate(article.isoDate);
 			},
 		},
-
 	};
 </script>

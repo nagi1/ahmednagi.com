@@ -4,10 +4,10 @@ export default ({ Vue }) => {
 	Vue.mixin({
 		computed: {
 			$articles() {
-				return this.$site.pages.filter(page => page.isArticle && this.$lang === page.lang).sort(sortByDate);
+				return this.$site.pages.filter((page) => page.isArticle && this.$lang === page.lang).sort(sortByDate);
 			},
-			$issues() {
-				return this.$site.pages.filter(page => page.frontmatter.layout === 'issue').sort(sortByDate);
+			$snippets() {
+				return this.$site.pages.filter((page) => page.frontmatter.layout === 'Snippet').sort(sortByDate);
 			},
 			$featuredArticles() {
 				const { featuredArticles, minimumFeaturedArticles } = this.$themeConfig;
