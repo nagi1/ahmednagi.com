@@ -1,10 +1,10 @@
 ---
-title: "[Educational] Unlock PHP Tools for VS Code"
+title: "How I cracked PHP Tools for VS Code"
 image: /covers/php-tools.png
-permalink: unlock-php-tools
+permalink: crack-php-tools
 subtitle: ""
 date: 2020-04-18 22:20
-description: How to unlock PHP Tools for VS Code
+description: How to crack PHP Tools for VS Code
 tags:
   - php
   - tools
@@ -14,7 +14,7 @@ tags:
 
 Last week I tried to unlock [Intelephense here](https://ahmednagi.com/unlock-intelephense/), and I got positive results so why not try the same approach with [PHP Tools](https://marketplace.visualstudio.com/items?itemName=DEVSENSE.phptools-vscode)?
 
-> **Note:** *that I'm applying this on the current release 1.0.4, method names might change in upcoming releases, but the same principles apply.*
+> **Note:** *that I'm applying this on the current release 1.0.4, method names might change in upcoming releases, though the same principles applies.*
 
 So let's get started.
 

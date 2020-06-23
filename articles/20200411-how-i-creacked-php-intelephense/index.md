@@ -1,7 +1,7 @@
 ---
-title: "[Educational] Unlock Intelephense premium features"
+title: "How I cracked php Intelephense"
 image: /covers/php-intelephense.png
-permalink: unlock-intelephense
+permalink: crack-intelephense
 subtitle: ""
 date: 2020-04-11 14:39
 description: How to unlock premium features in php intelephense extension for vscode.
@@ -14,7 +14,7 @@ tags:
 
 I love how **[Intelephense](https://intelephense.com/)** brings most of PHPStorm features to VSCode. But unfortunately the free version doesn't have the cool features.
 
-> **Note:** *I'm applying this on the current release 1.4.1, file names might change in upcoming releases, but the same principle applies.*
+> **Note:** *I'm applying this on the current release 1.4.1, file names might change in upcoming releases, though the same principle applies.*
 
 So let's get started.
 
