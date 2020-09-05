@@ -20,7 +20,8 @@ module.exports = {
 		domain: 'https://ahmednagi.com',
 
 		repo: 'https://github.com/nagi1/ahmednagi.com',
-		nav: ['/', '/tag/', '/all/snippets/', '/all/', '/work/', '/ar/work/'],
+		nav: ['/', '/tag/', '/all/snippets/', '/all/'],
+		// nav: ['/', '/tag/', '/all/snippets/', '/all/', '/work/', '/ar/work/'],
 		author: {
 			name: 'Ahmed Nagi',
 			twitter: '@nagiworks',
