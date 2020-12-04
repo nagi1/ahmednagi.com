@@ -1,6 +1,6 @@
 ---
 title: "Visualize your progress improve your results"
-image: /covers/hill-charts.gif
+image: /covers/hill-chart-cover.png
 permalink: hill-chart
 subtitle: "Using hill charts"
 date: 2020-04-18 22:20
