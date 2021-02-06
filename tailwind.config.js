@@ -3,8 +3,8 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 module.exports = {
 	purge: {
 		content: [
-			`./**/*.@(js|md|vue|html)`,
-			`./**/*.@(js|md|vue|html)`,
+			// `./**/*.@(js|md|vue|html)`,
+			// `./**/*.@(js|md|vue|html)`,
 			'./.vuepress/theme/**/*.html',
 			'./.vuepress/**/*.vue',
 			'./.vuepress/theme/**/*.jsx',

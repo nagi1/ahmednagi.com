@@ -16,13 +16,6 @@ module.exports = {
 	},
 	plugins: [
 		[
-			'@vuepress/pwa',
-			{
-				serviceWorker: true,
-				updatePopup: true,
-			},
-		],
-		[
 			'@vuepress/google-analytics',
 			{
 				ga: 'UA-189097283-1', // UA-00000000-0
