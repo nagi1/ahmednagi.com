@@ -31,6 +31,21 @@ module.exports = {
 				module: {
 					rules: [
 						{
+							test: /\.(png|jpe?g|webp|git|svg|)$/i,
+							use: [
+								{
+									loader: `img-optimize-loader`,
+									options: {
+										compress: {
+											// This will transform your png/jpg into webp.
+											webp: true,
+											disableOnDevelopment: true,
+										},
+									},
+								},
+							],
+						},
+						{
 							test: /\.(jpe?g|png|gif|svg)$/i,
 							loader: 'file-loader',
 							options: {
