@@ -11,7 +11,7 @@ I am a remote software engineer whose ambition is not to "create the next big th
 
 ## Skills
 
-<Skills  
+<Skills
     class="mb-8"
     :skills="[
         { body: 'Soft', theme: 'category', icon: 'chat-group-alt' },
@@ -71,7 +71,6 @@ I am a remote software engineer whose ambition is not to "create the next big th
 <small>London, United Kingdom — 2018-present</small> \
 <small>Malaga, Spain — 2018</small>
 
-![Elegon header](./elegon.png)
 
 #### Why?
 
@@ -102,7 +101,6 @@ In order to design software we can be proud of, whether it is for an ambitious c
 [CIMIC Center Of Excellence (CCOE)](http://www.cimic-coe.org/) \
 <small>The Hague, Netherlands — 2016-2017</small>
 
-![CCOE, Delft](./ccoe.jpg)
 
 #### Why?
 
@@ -133,7 +131,6 @@ In order to improve the current model of a NATO accredited organisation by using
 [Junior Entreprise EPFL](http://je.epfl.ch/) \
 <small>Lausanne, Switzerland — 2014-2016</small>
 
-![jeeplf2](./jeepfl.jpg)
 
 #### Why?
 

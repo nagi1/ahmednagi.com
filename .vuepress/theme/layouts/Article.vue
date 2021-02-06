@@ -13,14 +13,14 @@
 		</article>
 
 		<!-- Subscription form. -->
-		<!-- <div class="bg-secondary pt-8 py-8">
-            <div class="container">
-                <SubscribeForm />
-            </div>
-        </div> -->
+		<div dir="ltr" class="py-8 pt-8 bg-ternary">
+			<div class="container sm:px-10">
+				<SubscribeForm />
+			</div>
+		</div>
 
 		<!-- Disqus. -->
-		<div class="bg-primary py-16">
+		<div class="py-16 bg-primary">
 			<div class="container py-4 sm:py-8">
 				<h2>{{ $lang === 'ar' ? 'التعليقات' : 'Comments' }}</h2>
 				<Disqus shortname="ahmednagi" :title="$page.title" :identifier="disqusIdentifier" :url="disqusUrl" />
@@ -32,13 +32,7 @@
 			<div class="container py-4 sm:py-8">
 				<h2>{{ $lang === 'ar' ? 'اقرأ ايضا' : 'Related articles' }}</h2>
 				<div class="flex flex-wrap -mx-5">
-					<ArticleCard
-						v-for="article in relatedArticles"
-						:key="article.key"
-						:article="article"
-						class="mx-5 mb-8"
-						style="flex: 1 1 300px;"
-					/>
+					<ArticleCard v-for="article in relatedArticles" :key="article.key" :article="article" class="mx-5 mb-8" style="flex: 1 1 300px;" />
 				</div>
 			</div>
 		</div>
@@ -64,9 +58,7 @@
 			},
 			relatedArticles() {
 				const tags = this.$page.frontmatter.tags || [];
-				const relatedArticles = this.$articles.filter((a) =>
-					(a.frontmatter.tags || []).some((tag) => tags.includes(tag)),
-				);
+				const relatedArticles = this.$articles.filter((a) => (a.frontmatter.tags || []).some((tag) => tags.includes(tag)));
 
 				return randomElements(excludePages(relatedArticles, [this.$page]), 2);
 			},

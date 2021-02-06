@@ -7,20 +7,20 @@
 		<Navigator ref="navigator" />
 
 		<!-- Page. -->
-		<div class="relative w-full max-w-screen-xl mx-auto mt-4 xl:my-8 xl:rounded-lg overflow-hidden shadow-lg">
+		<div class="relative w-full max-w-screen-xl mx-auto mt-4 overflow-hidden shadow-lg xl:my-8 xl:rounded-lg">
 			<MenuButton @click="$refs.navigator.open()" />
 
 			<div class="flex flex-col">
 				<div class="flex items-center py-3 bg-body">
 					<div class="flex justify-center w-full">
 						<dark-switcher class="ltr:mr-3 rtl:ml-3" />
-						<router-link class="no-underline text-secondary font-semibold text-lg hover:text-linkHover hover:underline font-semibold" :to="langLink.href">{{ langLink.text }}</router-link>
+						<router-link class="text-lg font-semibold no-underline text-secondary hover:text-linkHover hover:underline" :to="langLink.href">{{ langLink.text }}</router-link>
 					</div>
 				</div>
 				<component :is="layout" />
 			</div>
 
-			<div class="border-t border-borderPrimary bg-transparent">
+			<div class="bg-transparent border-t border-borderPrimary">
 				<Footer />
 			</div>
 		</div>
@@ -34,6 +34,7 @@
 	import DarkSwitcher from '@theme/components/DarkSwitcher';
 	import Footer from '@theme/components/Footer';
 	import Bus from '@theme/Bus';
+	import SubscribeForm from '@theme/components/SubscribeForm';
 
 	// Available layouts.
 	import Article from '@theme/layouts/Article';
@@ -56,6 +57,7 @@
 			Home,
 			Layout,
 			Tags,
+			SubscribeForm,
 		},
 		data() {
 			return { dark: false };
@@ -125,7 +127,7 @@
 		},
 		computed: {
 			layout() {
-				if (!this.$page.path) return 'Layout'; // TODO 404.vue
+				if (!this.$page.path) return '404'; // TODO 404.vue
 				if (this.$frontmatter.layout) return this.$frontmatter.layout;
 				if (this.$page.isArticle) return 'Article';
 				return 'Layout';
@@ -140,10 +142,10 @@
 
 				if (pageLang.length < 1) {
 					link.href = this.$lang === 'en' ? '/ar/' : '/';
-					link.text = this.$lang === 'en' ? 'بالعربي' : 'English';
+					link.text = this.$lang === 'en' ? 'اقرأ بالعربي' : 'English';
 				} else {
 					link.href = pageLang[0].path;
-					const langText = this.$lang === 'en' ? 'بالعربي - ' : 'English - ';
+					const langText = this.$lang === 'en' ? 'اقرأ بالعربي - ' : 'English - ';
 					link.text = langText + pageLang[0].title;
 				}
 

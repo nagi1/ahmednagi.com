@@ -26,7 +26,7 @@ pre, pre[class*="language-"]
 
 code, kbd
     padding theme('padding.1') theme('padding.2')
-    border-radius theme('borderRadius.default')
+    border-radius  0px;
     font-size 0.85em
     margin 0
 
@@ -85,4 +85,3 @@ for lang in $langMap
     div{'[class~="language-' + lang[0] + '"]'}
         &:before
             content ('' + lang[1])
-            

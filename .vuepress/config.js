@@ -1,3 +1,5 @@
+const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
+
 module.exports = {
 	title: 'Ahmed Nagi',
 	locales: {
@@ -12,10 +14,63 @@ module.exports = {
 			description: 'Dev Blog',
 		},
 	},
+	plugins: [
+		[
+			'@vuepress/pwa',
+			{
+				serviceWorker: true,
+				updatePopup: true,
+			},
+		],
+		[
+			'@vuepress/google-analytics',
+			{
+				ga: 'UA-189097283-1', // UA-00000000-0
+			},
+		],
+	],
 	postcss: {
 		plugins: [require('tailwindcss')('./tailwind.config.js'), require('autoprefixer')],
 	},
-
+	configureWebpack: (config, isServer) => {
+		if (/* !isServer */ true) {
+			return {
+				module: {
+					rules: [
+						{
+							test: /\.(jpe?g|png|gif|svg)$/i,
+							loader: 'file-loader',
+							options: {
+								bypassOnDebug: true,
+							},
+						},
+					],
+				},
+				plugins: [
+					new ImageMinimizerPlugin({
+						minimizerOptions: {
+							// Lossless optimization with custom option
+							plugins: [
+								['gifsicle', { interlaced: true }],
+								['jpegtran', { progressive: true }],
+								['optipng', { optimizationLevel: 5 }],
+								[
+									'svgo',
+									{
+										plugins: [
+											{
+												removeViewBox: false,
+											},
+										],
+									},
+								],
+							],
+						},
+					}),
+				],
+			};
+		}
+	},
 	themeConfig: {
 		domain: 'https://ahmednagi.com',
 
