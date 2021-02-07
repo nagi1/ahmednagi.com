@@ -17,8 +17,7 @@
 	],
 	"scripts": {
 		"dev": "vuepress dev",
-		"build": "vuepress build",
-		"local-admin": "npx netlify-cms-proxy-server"
+		"build": "vuepress build"
 	},
 	"devDependencies": {
 		"@vue/babel-preset-app": "^4.5.11",
@@ -31,8 +30,11 @@
 		"imagemin-jpegtran": "^7.0.0",
 		"imagemin-optipng": "^8.0.0",
 		"imagemin-svgo": "^8.0.0",
+		"imagemin-webp": "^6.0.0",
+		"imagemin-webp-webpack-plugin": "^3.3.3",
 		"img-optimize-loader": "^1.0.7",
 		"moment": "^2.24.0",
+		"multi-loader": "^0.1.0",
 		"postcss": "^8.2.4",
 		"svg-inline-loader": "^0.8.0",
 		"svg-url-loader": "^7.1.1",
@@ -42,6 +44,7 @@
 		"vuepress": "^1.8.0",
 		"vuepress-plugin-disqus": "^0.2.0",
 		"vuepress-plugin-seo": "^0.1.2",
+		"webp-loader": "^0.6.0",
 		"webpack-cli": "^4.5.0"
 	},
 	"dependencies": {

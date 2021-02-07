@@ -1,35 +1,12 @@
 <!DOCTYPE html>
 <html dir="" lang="{{ lang }}">
 	<head>
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-6V2PD0VWZE"></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag() {
-				dataLayer.push(arguments);
-			}
-			gtag('js', new Date());
-
-			gtag('config', 'G-6V2PD0VWZE');
-		</script>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width,initial-scale=1" />
-		<!-- <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script> -->
 		<title></title>
 	</head>
 	<body>
 		<div id="app"></div>
 		<script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
-		<script>
-			if (window.netlifyIdentity) {
-				window.netlifyIdentity.on('init', (user) => {
-					if (!user) {
-						window.netlifyIdentity.on('login', () => {
-							document.location.href = '/admin/';
-						});
-					}
-				});
-			}
-		</script>
 	</body>
 </html>

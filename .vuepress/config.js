@@ -1,4 +1,5 @@
 const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
+const multi = require('multi-loader');
 
 module.exports = {
 	title: 'Ahmed Nagi',
@@ -14,14 +15,7 @@ module.exports = {
 			description: 'Dev Blog',
 		},
 	},
-	plugins: [
-		[
-			'@vuepress/google-analytics',
-			{
-				ga: 'UA-189097283-1', // UA-00000000-0
-			},
-		],
-	],
+	plugins: [['@vuepress/plugin-google-analytics', { ga: 'UA-189097283-1' }]],
 	postcss: {
 		plugins: [require('tailwindcss')('./tailwind.config.js'), require('autoprefixer')],
 	},
@@ -30,27 +24,40 @@ module.exports = {
 			return {
 				module: {
 					rules: [
+						// {
+						// 	test: /\.(png|jpe?g|webp|git|svg|)$/i,
+						// 	use: [
+						// 		{
+						// 			loaders: [`img-optimize-loader`],
+						// 			options: {
+						// 				compress: {
+						// 					// This will transform your png/jpg into webp.
+						// 					webp: true,
+						// 					disableOnDevelopment: true,
+						// 				},
+						// 			},
+						// 		},
+						// 	],
+						// },
+						// {
+						// 	test: /\.(jpe?g|png|gif|svg)$/i,
+						// 	loader: 'file-loader',
+						// 	options: {
+						// 		bypassOnDebug: true,
+						// 	},
+						// },
+
 						{
-							test: /\.(png|jpe?g|webp|git|svg|)$/i,
+							test: /\.(jpe?g|png|gif|svg)$/i,
 							use: [
 								{
-									loader: `img-optimize-loader`,
-									options: {
-										compress: {
-											// This will transform your png/jpg into webp.
-											webp: true,
-											disableOnDevelopment: true,
-										},
-									},
+									loader: 'file-loader',
 								},
 							],
 						},
 						{
-							test: /\.(jpe?g|png|gif|svg)$/i,
-							loader: 'file-loader',
-							options: {
-								bypassOnDebug: true,
-							},
+							test: /\.(jpe?g|png)$/i,
+							loader: multi('file-loader?name=[name].[ext].webp!webp-loader?{quality: 75}', 'file-loader?name=[name].[ext]'),
 						},
 					],
 				},
@@ -73,6 +80,14 @@ module.exports = {
 									},
 								],
 							],
+						},
+					}),
+					new ImageMinimizerPlugin({
+						test: /\.(jpe?g|png)$/i,
+						deleteOriginalAssets: false,
+						filename: '[path][name].webp',
+						minimizerOptions: {
+							plugins: ['imagemin-webp'],
 						},
 					}),
 				],
