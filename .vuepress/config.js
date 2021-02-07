@@ -1,5 +1,5 @@
 const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
-const multi = require('multi-loader');
+const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin');
 
 module.exports = {
 	title: 'Ahmed Nagi',
@@ -15,7 +15,15 @@ module.exports = {
 			description: 'Dev Blog',
 		},
 	},
-	plugins: [['@vuepress/plugin-google-analytics', { ga: 'UA-189097283-1' }]],
+	plugins: [
+		['@vuepress/plugin-google-analytics', { ga: 'UA-189097283-1' }],
+		[
+			'google-gtag',
+			{
+				ga: 'G-6V2PD0VWZE',
+			},
+		],
+	],
 	postcss: {
 		plugins: [require('tailwindcss')('./tailwind.config.js'), require('autoprefixer')],
 	},
@@ -24,40 +32,27 @@ module.exports = {
 			return {
 				module: {
 					rules: [
-						// {
-						// 	test: /\.(png|jpe?g|webp|git|svg|)$/i,
-						// 	use: [
-						// 		{
-						// 			loaders: [`img-optimize-loader`],
-						// 			options: {
-						// 				compress: {
-						// 					// This will transform your png/jpg into webp.
-						// 					webp: true,
-						// 					disableOnDevelopment: true,
-						// 				},
-						// 			},
-						// 		},
-						// 	],
-						// },
-						// {
-						// 	test: /\.(jpe?g|png|gif|svg)$/i,
-						// 	loader: 'file-loader',
-						// 	options: {
-						// 		bypassOnDebug: true,
-						// 	},
-						// },
-
 						{
-							test: /\.(jpe?g|png|gif|svg)$/i,
+							test: /\.(png|jpe?g|webp|git|svg|)$/i,
 							use: [
 								{
-									loader: 'file-loader',
+									loader: `img-optimize-loader`,
+									options: {
+										compress: {
+											// This will transform your png/jpg into webp.
+											webp: true,
+											disableOnDevelopment: true,
+										},
+									},
 								},
 							],
 						},
 						{
-							test: /\.(jpe?g|png)$/i,
-							loader: multi('file-loader?name=[name].[ext].webp!webp-loader?{quality: 75}', 'file-loader?name=[name].[ext]'),
+							test: /\.(jpe?g|png|gif|svg)$/i,
+							loader: 'file-loader',
+							options: {
+								bypassOnDebug: true,
+							},
 						},
 					],
 				},
@@ -82,13 +77,19 @@ module.exports = {
 							],
 						},
 					}),
-					new ImageMinimizerPlugin({
-						test: /\.(jpe?g|png)$/i,
-						deleteOriginalAssets: false,
-						filename: '[path][name].webp',
-						minimizerOptions: {
-							plugins: ['imagemin-webp'],
-						},
+					new ImageminWebpWebpackPlugin({
+						config: [
+							{
+								test: /\.(jpe?g|png)/,
+								options: {
+									quality: 75,
+								},
+							},
+						],
+						overrideExtension: true,
+						detailedLogs: false,
+						silent: false,
+						strict: true,
 					}),
 				],
 			};
