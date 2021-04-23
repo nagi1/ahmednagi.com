@@ -8,7 +8,7 @@
 
 		<div class="text-4xl font-bold leading-tight text-primary md:text-5xl" v-text="effectiveTitle"></div>
 
-		<div class="font-serif text-lg font-medium text-secondary md:text-xl" v-if="effectiveSubtitle" v-text="effectiveSubtitle"></div>
+		<div class="mt-3 font-serif text-lg font-medium text-secondary md:text-xl" v-if="effectiveSubtitle" v-text="effectiveSubtitle"></div>
 	</header>
 </template>
 

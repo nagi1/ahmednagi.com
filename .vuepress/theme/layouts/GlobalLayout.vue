@@ -13,7 +13,7 @@
 			<div class="flex flex-col">
 				<div class="flex items-center py-3 bg-body">
 					<div class="flex justify-center w-full">
-						<dark-switcher class="ltr:mr-3 rtl:ml-3" />
+						<dark-switcher class="rtl:ml-3" />
 						<router-link class="text-lg font-semibold no-underline text-secondary hover:text-linkHover hover:underline" :to="langLink.href">{{ langLink.text }}</router-link>
 					</div>
 				</div>
