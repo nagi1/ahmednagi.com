@@ -49,6 +49,7 @@
 		"webpack-cli": "^4.5.0"
 	},
 	"dependencies": {
-		"vue-cookies": "^1.7.0"
+		"vue-cookies": "^1.7.0",
+		"vue-i18n": "^8.24.3"
 	}
 }

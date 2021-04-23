@@ -59,6 +59,7 @@
 			Tags,
 			SubscribeForm,
 		},
+
 		data() {
 			return { dark: false };
 		},
@@ -74,6 +75,7 @@
 			},
 
 			setLanguage() {
+				this.$i18n.locale = this.$lang;
 				if (this.$lang !== this.$page.lang) {
 					console.log('not same');
 				}
@@ -127,7 +129,7 @@
 		},
 		computed: {
 			layout() {
-				if (!this.$page.path) return '404'; // TODO 404.vue
+				if (!this.$page.path) return 'NotFound';
 				if (this.$frontmatter.layout) return this.$frontmatter.layout;
 				if (this.$page.isArticle) return 'Article';
 				return 'Layout';
@@ -146,7 +148,7 @@
 				} else {
 					link.href = pageLang[0].path;
 					const langText = this.$lang === 'en' ? 'اقرأ بالعربي - ' : 'English - ';
-					link.text = langText + pageLang[0].title;
+					link.text = langText + pageLang[0].title.substring(0, 20).trimEnd() + '...';
 				}
 
 				return link;

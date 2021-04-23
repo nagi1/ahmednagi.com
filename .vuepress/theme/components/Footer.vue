@@ -22,9 +22,7 @@
 			<!-- Facebook -->
 			<a href="https://facbook.com/nagiwork" class="text-primary hover:text-blue-700 border-0 mx-2">
 				<svg class="fill-current w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-					<path
-						d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"
-					/>
+					<path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
 				</svg>
 			</a>
 		</div>
@@ -33,8 +31,7 @@
 		<!-- <div class="flex w-1/2 flex-wrap justify-start items-end mt-5"> -->
 		<div class="text-center mt-5">
 			<p class="text-secondary" style="direction: ltr;">
-				Ahmed Nagi - Powerd By <a href="https://Vuepress.vuejs.org" target="_blank">Vuepress</a>. hosted with
-				<a href="https://www.github.com/" target="_blank">GitHub</a> and
+				Ahmed Nagi - Powerd By <a href="https://Vuepress.vuejs.org" target="_blank">Vuepress</a>. Hosted with <a href="https://www.github.com/" target="_blank">GitHub</a> and
 				<a href="https://www.netlify.com/" target="_blank">Netlify</a>.
 			</p>
 		</div>

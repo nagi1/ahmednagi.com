@@ -1,16 +1,8 @@
 <template>
-	<form
-		action="https://app.convertkit.com/forms/2018740/subscriptions"
-		method="post"
-		data-sv-form="2018740"
-		data-uid="37ce9dbcf6"
-		data-format="inline"
-		data-version="5"
-		data-options='{"settings":{"after_subscribe":{"action":"message","success_message":"Success! Now check your email to confirm your subscription.","redirect_url":""},"analytics":{"google":null,"facebook":null,"segment":null,"pinterest":null,"sparkloop":null,"googletagmanager":null},"modal":{"trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15},"powered_by":{"show":true,"url":"https://convertkit.com?utm_source=dynamic&amp;utm_medium=referral&amp;utm_campaign=poweredby&amp;utm_content=form"},"recaptcha":{"enabled":false},"return_visitor":{"action":"show","custom_content":""},"slide_in":{"display_in":"bottom_right","trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15},"sticky_bar":{"display_in":"top","trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15}},"version":"5"}'
-	>
-		<div class="text-primary">
-			<h1 class="text-3xl font-semibold">My Newsletter</h1>
-			<p class="mt-3 text-lg">I send out an email every so often about cool stuff I'm working on or launching. If you dig, go ahead and sign up!</p>
+	<form action="https://app.convertkit.com/forms/2018740/subscriptions" method="post" data-sv-form="2018740" data-uid="37ce9dbcf6" data-format="inline" data-version="5" :data-options="options">
+		<div class="rtl:text-right text-primary">
+			<h1 class="text-3xl font-semibold">{{ $t('newsLetter.title') }}</h1>
+			<p class="mt-3 text-lg">{{ $t('newsLetter.description') }}</p>
 		</div>
 		<div style="position: absolute; left: -5000px;" aria-hidden="true">
 			<input type="text" name="b_1825e48b40ecf67719a0884fa_33688ddc10" tabindex="-1" value="" />
@@ -36,7 +28,7 @@
 					@mouseleave="submitHovered = false"
 				></button>
 			</div>
-			<p class="text-lg">No spam, only goldden nuggets 💎</p>
+			<p class="text-lg">{{ $t('newsLetter.subDescription') }}</p>
 		</div>
 	</form>
 </template>
@@ -45,21 +37,33 @@
 	import { randomElement } from '@theme/utils';
 
 	export default {
-		props: {
-			placeholder: { default: 'Your email here. 💌' },
-			submitButton: { default: 'Subscribe' },
-			submitEmojis: {
-				default: () => ['💌', '🎁', '😘', '🙌', '👋', '👀', '🐼', '⛄️', '🎂', '🍺', '🚀', '💡', '💎', '🎉', '📦', '📚', '📨', '🍪'],
-			},
-		},
+		props: {},
 		data() {
 			return {
 				submitHovered: false,
+				placeholder: this.$t('newsLetter.placeholder'),
+				submitButton: this.$t('newsLetter.subscribe'),
+				submitEmojis: ['💌', '🎁', '😘', '🙌', '👋', '👀', '🐼', '⛄️', '🎂', '🍺', '🚀', '💡', '💎', '🎉', '📦', '📚', '📨', '🍪'],
 			};
 		},
 		computed: {
 			submitText() {
 				return this.submitHovered ? randomElement(this.submitEmojis) : this.submitButton;
+			},
+			options() {
+				return {
+					settings: {
+						after_subscribe: { action: 'message', success_message: this.$t('newsLetter.successMessage'), redirect_url: this.$themeConfig.domain },
+						analytics: { google: null, facebook: null, segment: null, pinterest: null, sparkloop: null, googletagmanager: null },
+						modal: { trigger: 'timer', scroll_percentage: null, timer: 5, devices: 'all', show_once_every: 15 },
+						powered_by: { show: true, url: 'https://convertkit.com?utm_source=dynamic&amp;utm_medium=referral&amp;utm_campaign=poweredby&amp;utm_content=form' },
+						recaptcha: { enabled: false },
+						return_visitor: { action: 'show', custom_content: '' },
+						slide_in: { display_in: 'bottom_right', trigger: 'timer', scroll_percentage: null, timer: 5, devices: 'all', show_once_every: 15 },
+						sticky_bar: { display_in: 'top', trigger: 'timer', scroll_percentage: null, timer: 5, devices: 'all', show_once_every: 15 },
+					},
+					version: '5',
+				};
 			},
 		},
 	};
