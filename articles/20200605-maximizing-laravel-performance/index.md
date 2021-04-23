@@ -1,7 +1,7 @@
 ---
 title: Maximizing laravel performance
 image: /covers/database-performance-part1.png
-permalink: laravel-performance
+permalink: /laravel-performance
 subtitle: By pushing more work to the database layer
 date: 2020-06-05 14:25
 description: Maximizing laravel eloquent performance by pushing more work to the

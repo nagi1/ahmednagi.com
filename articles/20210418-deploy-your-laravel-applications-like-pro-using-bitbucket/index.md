@@ -1,7 +1,7 @@
 ---
 title: "Deploy your laravel applications like pro using Bitbucket"
 image: /covers/laravel-deploy-bitbucket.png
-permalink: laravel-deploy-bitbucket
+permalink: /laravel-deploy-bitbucket
 subtitle: "Achieve zero-downtime deployments"
 date: "2021-04-18 22:20"
 description: "How to deploy laravel applications with zero-downtime using Bitbucket pipelines. Detailed technical guide"

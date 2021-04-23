@@ -1,7 +1,7 @@
 ---
 title: "How I cracked PHP Tools for VS Code"
 image: /covers/php-tools.png
-permalink: crack-php-tools
+permalink: /crack-php-tools
 subtitle: ""
 date: 2020-04-18 22:20
 description: How to crack PHP Tools for VS Code

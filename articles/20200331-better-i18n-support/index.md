@@ -1,7 +1,7 @@
 ---
 title: Better i18n support
 image: /covers/untitled.png
-permalink: better-i18n-support
+permalink: /better-i18n-support
 subtitle: specially Arabic
 date: '2020-03-31 08:35'
 description: >-
@@ -15,7 +15,7 @@ tags:
 Working with different languages can be challenging. Specially languages that have multiple references to different things like **gender.**
 
 Languages like **Arabic** reference words as **male** or **female** depends on the context and grammar.\
-In English when we refer to gender we say *(I'll till her / him)* in Arabic we say *(سوف اقول له)* for male, *(سوف اقول لها)* for female. 
+In English when we refer to gender we say *(I'll till her / him)* in Arabic we say *(سوف اقول له)* for male, *(سوف اقول لها)* for female.
 
 Managing this in a template using if statements can be tedious.
 
@@ -28,7 +28,7 @@ Managing this in a template using if statements can be tedious.
 **/
 
 function gr(gender, maleRef, femaleRef) {
-      
+
         if(gender == 'female') {
           return femaleRef;
         }

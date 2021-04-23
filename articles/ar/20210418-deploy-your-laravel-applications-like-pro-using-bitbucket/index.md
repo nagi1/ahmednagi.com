@@ -1,6 +1,6 @@
 ---
 title: "ازاي ترفع مواقع اللارفيل باحترافية على السرفر باستخدام Bitbcket"
-image: /covers/laravel-deploy-bitbucket.png
+image: /covers/laravel-deploy-bitbucket-ar.png
 permalink: ar/laravel-deploy-bitbucket
 subtitle: "ما تخليش الموقع بتاعك يقع ولا ثانية"
 date: "2021-04-18 22:20"

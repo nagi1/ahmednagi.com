@@ -1,7 +1,7 @@
 ---
 title: "How I cracked php Intelephense"
 image: /covers/php-intelephense.png
-permalink: crack-intelephense
+permalink: /crack-intelephense
 subtitle: ""
 date: 2020-04-11 14:39
 description: How to unlock premium features in php intelephense extension for vscode.

@@ -107,7 +107,7 @@ module.exports = {
 		},
 		articlesPerPage: 10,
 		minimumFeaturedArticles: 10,
-		featuredArticles: ['/learn-laravel-deployer-2/', '/ar/laravel-page/'],
+		featuredArticles: ['/laravel-deploy-bitbucket/', '/hill-chart/'],
 	},
 	head: [
 		['link', { rel: 'apple-touch-icon', sizes: '57x57', href: '/apple-icon-57x57.png' }],
