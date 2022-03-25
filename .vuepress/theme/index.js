@@ -1,8 +1,27 @@
 const path = require('path');
+const moment = require('moment');
 
 module.exports = {
 	plugins: [
-		['@vuepress/google-analytics', { ga: 'UA-100767601-5' }],
+		[
+			'@vuepress/last-updated',
+			{
+				transformer: (timestamp, lang) => {
+					moment.locale('en-US');
+					return moment(timestamp).fromNow();
+				},
+				dateOptions: {
+					hour12: true,
+				},
+			},
+		],
+		['@vuepress/plugin-google-analytics', { ga: 'UA-189097283-1' }],
+		[
+			'google-gtag',
+			{
+				ga: 'G-6V2PD0VWZE',
+			},
+		],
 
 		[
 			'@vuepress/blog',
@@ -35,7 +54,10 @@ module.exports = {
 		[
 			'seo',
 			{
-				image: ($page, $site) => $site.themeConfig.domain + $page.frontmatter.image,
+				url: (_, $site, path) => ($site.themeConfig.domain || '') + path,
+				image: ($page, $site) => ($page.frontmatter.image ? $site.themeConfig.domain + $page.frontmatter.image : $site.themeConfig.domain + '/uploads/ahmednagi.png'),
+				publishedAt: ($page) => $page.frontmatter.date && new Date($page.frontmatter.date),
+				modifiedAt: ($page) => $page.lastUpdated && new Date($page.lastUpdated),
 			},
 		],
 		'disqus',

@@ -44,6 +44,7 @@ function setIcon(page) {
 function setIsoDate(page) {
 	const dateString = page.frontmatter.date ? page.frontmatter.date : '2020-04-11 14:39';
 	page.isoDate = new Date(dateString).toISOString();
+	page.lastUpdated = new Date(page.frontmatter.lastUpdated ? page.frontmatter.lastUpdated : new Date().toUTCString()).toISOString();
 }
 
 function setLang(page) {

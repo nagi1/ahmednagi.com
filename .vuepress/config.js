@@ -1,6 +1,3 @@
-const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
-const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin');
-
 module.exports = {
 	title: 'Ahmed Nagi',
 	locales: {
@@ -19,97 +16,9 @@ module.exports = {
 			date: new Date().toISOString(),
 		},
 	},
-	plugins: [
-		['@vuepress/plugin-google-analytics', { ga: 'UA-189097283-1' }],
-		[
-			'google-gtag',
-			{
-				ga: 'G-6V2PD0VWZE',
-			},
-		],
-		[
-			'@vuepress/last-updated',
-			{
-				transformer: (timestamp, lang) => {
-					const moment = require('moment');
-					return moment(timestamp).fromNow();
-				},
-				dateOptions: {
-					hour12: false,
-				},
-			},
-		],
-	],
+
 	postcss: {
 		plugins: [require('tailwindcss')('./tailwind.config.js'), require('autoprefixer')],
-	},
-	configureWebpack: (config, isServer) => {
-		if (/* !isServer */ true) {
-			return {
-				module: {
-					rules: [
-						{
-							test: /\.(png|jpe?g|webp|git|svg|)$/i,
-							use: [
-								{
-									loader: `img-optimize-loader`,
-									options: {
-										compress: {
-											// This will transform your png/jpg into webp.
-											webp: true,
-											disableOnDevelopment: false,
-										},
-									},
-								},
-							],
-						},
-						{
-							test: /\.(jpe?g|png|gif|svg)$/i,
-							loader: 'file-loader',
-							options: {
-								bypassOnDebug: false,
-							},
-						},
-					],
-				},
-				plugins: [
-					new ImageMinimizerPlugin({
-						minimizerOptions: {
-							// Lossless optimization with custom option
-							plugins: [
-								['gifsicle', { interlaced: true }],
-								['jpegtran', { progressive: true }],
-								['optipng', { optimizationLevel: 5 }],
-								[
-									'svgo',
-									{
-										plugins: [
-											{
-												removeViewBox: false,
-											},
-										],
-									},
-								],
-							],
-						},
-					}),
-					// new ImageminWebpWebpackPlugin({
-					// 	config: [
-					// 		{
-					// 			test: /\.(jpe?g|png)/,
-					// 			options: {
-					// 				quality: 75,
-					// 			},
-					// 		},
-					// 	],
-					// 	overrideExtension: true,
-					// 	detailedLogs: false,
-					// 	silent: false,
-					// 	strict: true,
-					// }),
-				],
-			};
-		}
 	},
 	themeConfig: {
 		domain: 'https://ahmednagi.com',
