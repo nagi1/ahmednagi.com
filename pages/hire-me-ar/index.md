@@ -2,7 +2,7 @@
 title: CV
 permalink: ar/work
 subtitle: النسخة العربية
-date: '2020-03-19 17:28'
+date: 2020-03-19 17:28
 description: >-
   شغال اونلاين وحاليا بدور على شغل, بتخصص اكتر في البرمجة بال php باستخدام Laravel و Vuejs
 ---
@@ -70,5 +70,5 @@ In order to design software we can be proud of, whether it is for an ambitious c
 
 ## Languages
 
-* Arabic (native) 
+* Arabic (native)
 * English (Advanced)

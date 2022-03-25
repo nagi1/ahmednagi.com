@@ -37,6 +37,20 @@
 							<path d="M215.8 85H264V3.6C255.7 2.5 227.1 0 193.8 0 124.3 0 76.7 42.4 76.7 120.3V192H0v91h76.7v229h94V283h73.6l11.7-91h-85.3v-62.7c0-26.3 7.3-44.3 45.1-44.3z" />
 						</svg>
 					</a>
+                    
+					<a
+						class="block mx-1 leading-tight text-gray-600 border-0 hover:text-blue-600"
+						:href="`https://www.linkedin.com/sharing/share-offsite/?url=${absoluteUrl}`"
+						onclick="window.open(this.href, 'Share on Linkedin','width=580,height=296'); return false;"
+					>
+
+						<svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+							<path
+								d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
+							/>
+						</svg>
+
+					</a>
 				</div>
 			</div>
 		</div>

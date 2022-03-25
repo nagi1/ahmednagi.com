@@ -1,22 +1,36 @@
 <template>
 	<div class="xl:px-4" :class="{ 'theme-dark': dark }">
 		<!-- Animated background. -->
+
 		<AnimatedGradient class="fixed inset-0" />
 
 		<!-- Search and navigation menu. -->
+
 		<Navigator ref="navigator" />
 
 		<!-- Page. -->
+
 		<div class="relative w-full max-w-screen-xl mx-auto mt-4 overflow-hidden shadow-lg xl:my-8 xl:rounded-lg">
+			<!-- Quick links -->
+			<!-- <div class="flex items-center px-3 py-2 space-x-5 rtl:flex-row-reverse bg-ternary text-primary">
+
+				<router-link class="text-lg font-semibold no-underline text-primary hover:text-linkHover hover:underline" to="/hire-me">Hire me</router-link>
+
+				<router-link class="text-lg font-semibold no-underline text-primary hover:text-linkHover hover:underline" to="/resume">My Resume</router-link>
+
+			</div> -->
+
 			<MenuButton @click="$refs.navigator.open()" />
 
 			<div class="flex flex-col">
 				<div class="flex items-center py-3 bg-body">
 					<div class="flex justify-center w-full">
 						<dark-switcher class="rtl:ml-3" />
+
 						<router-link class="text-lg font-semibold no-underline text-secondary hover:text-linkHover hover:underline" :to="langLink.href">{{ langLink.text }}</router-link>
 					</div>
 				</div>
+
 				<component :is="layout" />
 			</div>
 

@@ -2,7 +2,7 @@
 title: Questions Bank
 permalink: questions-bank
 subtitle: Graduation project
-date: '2020-06-23 17:28'
+date: 2020-06-23 17:28
 description: >-
   Show case of my final graduation project called Questions bank
 ---

@@ -3,7 +3,7 @@ title: "ازاي ترفع مواقع اللارفيل باحترافية على 
 image: /covers/laravel-deploy-bitbucket-ar.png
 permalink: ar/laravel-deploy-bitbucket
 subtitle: "ما تخليش الموقع بتاعك يقع ولا ثانية"
-date: "2021-04-18 22:20"
+date: 2021-04-18 22:20
 description: "هتتعلم ازاي تقدر تعمل ترفع الموقع بتاعك على السرفر بطريقة احترافية ماتخليش الموقع يقع ولا ثانية"
 tags:
   - envoy
@@ -18,7 +18,7 @@ tags:
 البوست دا تيكنيكال ومفصل جدا وفيه اكواد كتير ولكن على قد ماقدرت حاولت استحدام كلمات بسيطة لوصف المصطلحات المعقدة,
 ومع ذلك اي كود هتنسخو هيشتغل على طول!
 
-![Deployment doesn't have to be war](/uploads/Slide2.PNG)
+![Deployment doesn't have to be war](/uploads/Slide2.png)
 
 ## خريطة الرحلة
 
@@ -124,7 +124,7 @@ Options +FollowSymLinks
 
 ### نظرة عامة عن خطوات تنفيذ الاوامر
 
-![Overview?](/uploads/Slide19.PNG)
+![Overview?](/uploads/Slide19.png)
 
 1- لما تعمل push لاي كود جديد على البرانش بتاعك ال pipeline هيشغل عملية رفع جديدة اللي متعرفة في ملف ال `bitbucket-pipeline.yaml`.
 
@@ -140,7 +140,7 @@ Options +FollowSymLinks
 - `.env` ملف .env العادي بتاع البرودكشن بس الملف دا هيكون متشير مابين كل الاصدارات.
 - `storage` مجلد ال storage العادي بس هيكون برضو متشير مابين كل الاصدارات.
 
-![Production directory structure](/uploads/Slide21.PNG)
+![Production directory structure](/uploads/Slide21.png)
 
 ### السرفرات المتعرفه جوا Envoy.blade.php
 
@@ -155,7 +155,7 @@ Options +FollowSymLinks
 
 - اول خطوة هتشتغل على `localhost`. بينقل او بيحول ملفات المشروع كلو واي نواتج مثل مجلد ال vendor من سيرفر bitbucket للسرفر او للمجلد بتاعك اللي متعرف في `DEPLOY_PATH`.
 
-![First Task Rsync](/uploads/Slide20.PNG)
+![First Task Rsync](/uploads/Slide20.png)
 
 #### Setup Symlinks
 
@@ -163,9 +163,9 @@ Options +FollowSymLinks
 - بيشوف لو الاصدار فيه مجلد ال `storage`, بينقلو لمجلد backup وبعدها بياخد symlink لل احدث اصدار موجود في ال `releases`.
 - بيربط ال `storage` ب `public/storage`. زي اللي بيعملو `php artisan storage:link`.
 
-![Setup Symlinks 1](/uploads/Slide22.PNG)
+![Setup Symlinks 1](/uploads/Slide22.png)
 
-![Setup Symlinks 2](/uploads/Slide23.PNG)
+![Setup Symlinks 2](/uploads/Slide23.png)
 
 #### Verify Install
 
@@ -175,11 +175,11 @@ Options +FollowSymLinks
 
 "**activate_release**", عمل symlink ل ملف ال `current` مع اجدد اصدار في مجلد ال `releases`.
 
-![activate_release](/uploads/Slide24.PNG)
+![activate_release](/uploads/Slide24.png)
 
 <WarningBox body="مهم جدا لازم تظبط السرفر بتاعك سواءا كان Nginx او Apache انو يقرأ الدومين بتاعك من ملف ال current يعني في الاخر هيكون المسار كدا path-to-production-dir/production/current/public"/>
 
-![activate_release 2](/uploads/Slide25.PNG)
+![activate_release 2](/uploads/Slide25.png)
 
 #### Migration
 
@@ -199,7 +199,7 @@ Options +FollowSymLinks
 
 لو حظك حلو ومشيت كل الخطوات من هنا ورايح كل push لل master اللي انا بفترض انك بتستخدمو ك production هيترفع على السرفر كأصدار جديد, السحر هنا بقا ان ملف ال `current` دائما بيبص على اخر اصدار شغل من الكود بتاعك ولما بتpush اي كود جديد ال `current` هيبص على الاصدار الجديد دا في ثانية بدون اي تأخير وبكدا هتكون حققت ال zero downtime deployment. الحلو في الموضوع برضو ان كل الاصدارت القديمة هتكون محفوظة على السرفر يعني لا قدر الله حتى لو الاصدار عدى من كل شيئ وطلع بايظ تقدر ترجع ورا للاصدار القديم اللي كان شغال. ايه رايك يا معلم!
 
-![Final overview](/uploads/Slide26.PNG)
+![Final overview](/uploads/Slide26.png)
 
 ### bitbucket-pipeline.yaml
 

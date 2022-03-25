@@ -8,11 +8,15 @@ module.exports = {
 			lang: 'ar',
 			title: 'احمد ناجي',
 			description: 'مدونة مطور',
+			date: new Date().toISOString(),
+			lastUpdated: new Date().toISOString(),
 		},
 		'/': {
 			lang: 'en',
 			title: 'Ahmed Nagi',
 			description: 'Dev Blog',
+			lastUpdated: new Date().toISOString(),
+			date: new Date().toISOString(),
 		},
 	},
 	plugins: [
@@ -21,6 +25,18 @@ module.exports = {
 			'google-gtag',
 			{
 				ga: 'G-6V2PD0VWZE',
+			},
+		],
+		[
+			'@vuepress/last-updated',
+			{
+				transformer: (timestamp, lang) => {
+					const moment = require('moment');
+					return moment(timestamp).fromNow();
+				},
+				dateOptions: {
+					hour12: false,
+				},
 			},
 		],
 	],
@@ -41,7 +57,7 @@ module.exports = {
 										compress: {
 											// This will transform your png/jpg into webp.
 											webp: true,
-											disableOnDevelopment: true,
+											disableOnDevelopment: false,
 										},
 									},
 								},
@@ -51,7 +67,7 @@ module.exports = {
 							test: /\.(jpe?g|png|gif|svg)$/i,
 							loader: 'file-loader',
 							options: {
-								bypassOnDebug: true,
+								bypassOnDebug: false,
 							},
 						},
 					],
@@ -77,20 +93,20 @@ module.exports = {
 							],
 						},
 					}),
-					new ImageminWebpWebpackPlugin({
-						config: [
-							{
-								test: /\.(jpe?g|png)/,
-								options: {
-									quality: 75,
-								},
-							},
-						],
-						overrideExtension: true,
-						detailedLogs: false,
-						silent: false,
-						strict: true,
-					}),
+					// new ImageminWebpWebpackPlugin({
+					// 	config: [
+					// 		{
+					// 			test: /\.(jpe?g|png)/,
+					// 			options: {
+					// 				quality: 75,
+					// 			},
+					// 		},
+					// 	],
+					// 	overrideExtension: true,
+					// 	detailedLogs: false,
+					// 	silent: false,
+					// 	strict: true,
+					// }),
 				],
 			};
 		}

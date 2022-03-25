@@ -3,7 +3,7 @@ title: Switch between LTR and RTL using stylus
 image: /covers/rtl-ltr.png
 layout: Snippet
 permalink: snippets/stylus-switch-direction
-date: '2020-03-19 16:00'
+date: 2020-03-19 16:00
 tags:
   - snippet
   - css

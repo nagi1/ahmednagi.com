@@ -9,11 +9,12 @@
 				<Header />
 				<ArticleMetaData />
 			</div>
+
 			<Content />
 		</article>
 
 		<!-- Subscription form. -->
-		<div dir="ltr" class="py-8 pt-8 bg-ternary">
+		<div class="py-8 pt-8 bg-ternary">
 			<div class="container sm:px-10">
 				<SubscribeForm />
 			</div>
@@ -32,7 +33,7 @@
 			<div class="container py-4 sm:py-8">
 				<h2>{{ $lang === 'ar' ? 'اقرأ ايضا' : 'Related articles' }}</h2>
 				<div class="flex flex-wrap -mx-5">
-					<ArticleCard v-for="article in relatedArticles" :key="article.key" :article="article" class="mx-5 mb-8" style="flex: 1 1 300px;" />
+					<ArticleCard v-for="article in relatedArticles" :key="article.key" :article="article" class="mx-5 mb-8" style="flex: 1 1 300px" />
 				</div>
 			</div>
 		</div>

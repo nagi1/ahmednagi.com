@@ -2,7 +2,7 @@
 title: Questions Bank
 permalink: ar/questions-bank
 subtitle: مشروع التخرج
-date: '2020-06-23 17:28'
+date: 2020-06-23 7:28
 description: >-
   نظرة سريعة على تنفيذ مشروع التخرج
 ---

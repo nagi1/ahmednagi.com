@@ -3,7 +3,7 @@ title: "Deploy your laravel applications like pro using Bitbucket"
 image: /covers/laravel-deploy-bitbucket.png
 permalink: /laravel-deploy-bitbucket
 subtitle: "Achieve zero-downtime deployments"
-date: "2021-04-18 22:20"
+date: 2021-04-18 22:20
 description: "How to deploy laravel applications with zero-downtime using Bitbucket pipelines. Detailed technical guide"
 tags:
   - envoy
@@ -18,7 +18,7 @@ In this journey I'll be your guide into how to deploy your laravel application t
 This is a detailed technical how-to guide, though I'll use simple words to describe most of the complicated technical terms.
 It also designed to be copy-paste friendly as you go!
 
-![Deployment doesn't have to be war](/uploads/Slide2.PNG)
+![Deployment doesn't have to be war](/uploads/Slide2.png)
 
 ## Trip Map
 
@@ -123,7 +123,7 @@ Let's take a step back and take a look on how this whole thing works. But first 
 
 ### Deployment steps overview
 
-![Overview?](/uploads/Slide19.PNG)
+![Overview?](/uploads/Slide19.png)
 
 1- When you push new code to master branch or your main branch. Pipeline will pickup on it and trigger deployment processes defined in `bitbucket-pipeline.yaml`.
 
@@ -139,7 +139,7 @@ Let's take a look at `production` folder structure.
 - `.env` your typical .env file contains your environment variables that will be shared across all releases.
 - `storage` also your typical storage folder that will be shared across all releases, you dont want to duplicate Gigabytes worth of data across multiple releases.
 
-![Production directory structure](/uploads/Slide21.PNG)
+![Production directory structure](/uploads/Slide21.png)
 
 ### Severs defined in Envoy.blade.php
 
@@ -154,7 +154,7 @@ Let's take a look at `production` folder structure.
 
 - First task called "**rsync**" will be executed on `localhost`. Resync (transfer) project files + any artifacts folders/files that resulted from executing any commands on the docker container to your server in `DEPLOY_PATH` dir.
 
-![First Task Rsync](/uploads/Slide20.PNG)
+![First Task Rsync](/uploads/Slide20.png)
 
 #### Setup Symlinks
 
@@ -162,9 +162,9 @@ Let's take a look at `production` folder structure.
 - Check if the new release folder has `storage` folder, then move it to backup format since we'll symlink `storage` folder found in `production` folder.
 - Link `storage` folder, and symlink `public/storage` folder as well.
 
-![Setup Symlinks 1](/uploads/Slide22.PNG)
+![Setup Symlinks 1](/uploads/Slide22.png)
 
-![Setup Symlinks 2](/uploads/Slide23.PNG)
+![Setup Symlinks 2](/uploads/Slide23.png)
 
 #### Verify Install
 
@@ -175,11 +175,11 @@ I chose a simple approach and ran `artisan --version`.
 
 "**activate_release**", Symlink `current` folder to the new release folder.
 
-![activate_release](/uploads/Slide24.PNG)
+![activate_release](/uploads/Slide24.png)
 
 <WarningBox body="You have to configure your server (Nginx/Apache) to point your domain to <strong>current/public</strong> symlink. Typically found in path-to-production-dir/production/current/public"/>
 
-![activate_release 2](/uploads/Slide25.PNG)
+![activate_release 2](/uploads/Slide25.png)
 
 #### Migration
 
@@ -199,7 +199,7 @@ I chose a simple approach and ran `artisan --version`.
 
 With any luck, every push to "master" i.e. production branch will be uploaded as separate new release. The magic here relays in `current` symlink that will point to the most recent **working** release. This happens instantly so you'll achieve zero-down time upgrade and in the same time allows to rollback to previous releases whenever needed. How cool is that!
 
-![Final overview](/uploads/Slide26.PNG)
+![Final overview](/uploads/Slide26.png)
 
 ### bitbucket-pipeline.yaml
 

@@ -1,13 +1,14 @@
 import moment from 'moment';
 
+moment.locale('en-US');
+
 export const sortByDate = (a, b) => new Date(b.isoDate) - new Date(a.isoDate);
 
-export const fetchPagesInArray = (pages, keys) =>
-	pages.filter(page => keys.includes(page.path)).sort((a, b) => keys.indexOf(a.path) - keys.indexOf(b.path));
+export const fetchPagesInArray = (pages, keys) => pages.filter((page) => keys.includes(page.path)).sort((a, b) => keys.indexOf(a.path) - keys.indexOf(b.path));
 
-export const excludePages = (pages, pagesToExclude) => pages.filter(page => !pagesToExclude.includes(page));
+export const excludePages = (pages, pagesToExclude) => pages.filter((page) => !pagesToExclude.includes(page));
 
-export const randomElement = arr => arr[Math.floor(Math.random() * arr.length)];
+export const randomElement = (arr) => arr[Math.floor(Math.random() * arr.length)];
 
 export const randomElements = ([...arr], n = 1) => {
 	let m = arr.length;
@@ -24,5 +25,5 @@ export function langFromPath(path) {
 	return path.includes('/ar/') ? 'ar' : 'en';
 }
 
-export const relativeDate = date => moment(date).fromNow();
-export const formatDate = date => moment(date).format('lll');
+export const relativeDate = (date) => moment(date).fromNow();
+export const formatDate = (date) => moment(date).format('lll');

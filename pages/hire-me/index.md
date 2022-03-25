@@ -2,7 +2,7 @@
 title: Hire Me
 permalink: work
 subtitle: CV
-date: '2020-03-19 17:28'
+date: 2020-03-19 17:28
 description: >-
   I am working remotely and currently looking for job. I specialize more in the
   backend side using Laravel and frontend using Vuejs
@@ -71,5 +71,5 @@ In order to design software we can be proud of, whether it is for an ambitious c
 
 ## Languages
 
-* Arabic (native) 
+* Arabic (native)
 * English (Advanced)

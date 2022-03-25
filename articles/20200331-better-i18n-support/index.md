@@ -3,7 +3,7 @@ title: Better i18n support
 image: /covers/untitled.png
 permalink: /better-i18n-support
 subtitle: specially Arabic
-date: '2020-03-31 08:35'
+date: 2020-03-31 08:35
 description: >-
   little snippets to support different gender references in i18n languages
   specially Arabic.
