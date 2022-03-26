@@ -1,5 +1,68 @@
 module.exports = {
 	title: 'Ahmed Nagi',
+	plugins: [
+		[
+			'@vuepress/last-updated',
+			{
+				transformer: (timestamp, lang) => {
+					return new Date(timestamp).toLocaleDateString();
+				},
+				dateOptions: {
+					hour12: true,
+				},
+			},
+		],
+		[
+			'sitemap',
+			{
+				hostname: 'https://ahmednagi.com',
+			},
+		],
+		[
+			'feed',
+			{
+				canonical_base: 'https://ahmednagi.com',
+			},
+		],
+		[
+			'vuepress-plugin-seo',
+			{
+				image: ($page, $site) => ($page.frontmatter.image ? $site.themeConfig.domain + $page.frontmatter.image : $site.themeConfig.domain + '/uploads/ahmednagi.png'),
+			},
+		],
+		[
+			'@vuepress/blog',
+			{
+				frontmatters: [
+					{
+						id: 'tag',
+						title: 'Tag',
+						keys: ['tags'],
+						path: '/tag/',
+						layout: 'Tags',
+						scopeLayout: 'ArticlesPaginated',
+						pagination: {
+							layout: 'ArticlesPaginated',
+							getPaginationPageTitle: (_, key) => `${key} Tag`,
+						},
+					},
+				],
+				globalPagination: {
+					lengthPerPage: 10,
+				},
+			},
+		],
+		'disqus',
+
+		['@vuepress/plugin-google-analytics', { ga: 'UA-189097283-1' }],
+		[
+			'google-gtag',
+			{
+				ga: 'G-6V2PD0VWZE',
+			},
+		],
+		require('./theme/extendPageData.js'),
+	],
 	locales: {
 		'/ar/': {
 			lang: 'ar',
