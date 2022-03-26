@@ -59,7 +59,7 @@ module.exports = {
 			},
 		],
 		'disqus',
-
+		'img-lazy',
 		['@vuepress/plugin-google-analytics', { ga: 'UA-189097283-1' }],
 		[
 			'google-gtag',
