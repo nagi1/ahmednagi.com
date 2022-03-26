@@ -42,6 +42,7 @@
 		"tailwindcss-dir": "^4.0.0",
 		"tailwindcss-plugins": "^0.3.0",
 		"vuepress": "^1.8.0",
+		"vuepress-plugin-canonical-with-pagination": "^0.2.0",
 		"vuepress-plugin-disqus": "^0.2.0",
 		"vuepress-plugin-google-gtag": "^1.0.1",
 		"vuepress-plugin-seo": "0.1.4",

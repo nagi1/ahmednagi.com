@@ -31,6 +31,12 @@ module.exports = {
 			},
 		],
 		[
+			'vuepress-plugin-canonical-with-pagination',
+			{
+				baseURL: 'https://ahmednagi.com', // base url for your schema, mandatory, default: ''
+			},
+		],
+		[
 			'@vuepress/blog',
 			{
 				frontmatters: [
@@ -67,14 +73,14 @@ module.exports = {
 		'/ar/': {
 			lang: 'ar',
 			title: 'احمد ناجي',
-			description: 'مدونة مطور',
+			description: 'مطور مواقع ومساهم في البرامج مفتوحة المصدر. اشارك كل مااتعلمه على مدونتي وعلى تويتر.',
 			date: new Date().toISOString(),
 			lastUpdated: new Date().toISOString(),
 		},
 		'/': {
 			lang: 'en',
 			title: 'Ahmed Nagi',
-			description: 'Dev Blog',
+			description: "Hey I'm Nagi @nagiworks, a full-stack developer and opensource contributor. I share everything I know about making awesome software through my blog, linkedin and twitter.",
 			lastUpdated: new Date().toISOString(),
 			date: new Date().toISOString(),
 		},
