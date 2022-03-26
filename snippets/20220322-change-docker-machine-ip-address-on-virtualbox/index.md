@@ -1,6 +1,6 @@
 ---
 title: Change docker machine ip address on virtualbox
-image: /covers/rtl-ltr.png
+image: /covers/change-ip-address.png
 layout: Snippet
 permalink: snippets/docker-machine-change-ip
 date: 2022-03-22 16:00
