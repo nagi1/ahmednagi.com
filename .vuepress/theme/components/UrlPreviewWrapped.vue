@@ -3,7 +3,7 @@
 		<template v-slot:default="preview">
 			<div class="relative w-full mx-auto overflow-hidden rounded-md shadow bg-primary sm:max-w-lg ring-1">
 				<div class="flex flex-col space-y-2">
-					<a :href="url" class="w-full"><img class="object-cover w-full h-60" :src="preview.img" :alt="preview.title" /></a>
+					<a :href="url" class="w-full"><img @error="replaceByDefault" class="object-cover w-full h-60" :src="preview.image" :alt="preview.title" /></a>
 
 					<div class="flex flex-col p-3 space-y-1">
 						<a :href="url" class="m-0 text-lg leading-tight no-underline text-primary hover:no-underline hover:text-primary sm:text-xl">{{ limit(preview.title, 100) }}</a>
@@ -17,7 +17,7 @@
 </template>
 
 <script>
-	import VueLinkPreview from '@ashwamegh/vue-link-preview/dist/vuelinkpreview.esm.js';
+	import VueLinkPreview from '@theme/components/VueLinkPreview';
 
 	export default {
 		name: 'UrlPreviewWrapped',
@@ -31,8 +31,13 @@
 			},
 		},
 		methods: {
+			replaceByDefault(e) {
+				e.target.src = 'https://ahmednagi.com/uploads/replace-not-found-link-previews.png';
+			},
 			limit(string, length) {
-				return string.length > length ? string.substring(0, length) + '...' : string;
+				if (string) return string.length > length ? string.substring(0, length) + '...' : string;
+
+				return '';
 			},
 		},
 	};
