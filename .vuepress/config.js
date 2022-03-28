@@ -101,7 +101,7 @@ module.exports = {
 		},
 		articlesPerPage: 10,
 		minimumFeaturedArticles: 10,
-		featuredArticles: ['create-social-media-headers', '/laravel-deploy-bitbucket/', '/hill-chart/'],
+		featuredArticles: ['/create-social-media-headers/', '/laravel-deploy-bitbucket/', '/hill-chart/'],
 	},
 	head: [
 		['link', { rel: 'apple-touch-icon', sizes: '57x57', href: '/apple-icon-57x57.png' }],
