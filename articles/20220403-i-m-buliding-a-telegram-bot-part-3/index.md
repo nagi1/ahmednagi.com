@@ -4,7 +4,7 @@ image: /covers/telegram-bot-part3.png
 description: Almost there on my journey to create a telegram bot that will remind changing my car oil for me using nodejs.
 permalink: oilly-telegram-bot-part-3
 subtitle: "Progress, progress, sweet progress"
-date: 2022-04-02 16:00
+date: 2022-04-03 16:00
 series: oilly-telegram-bot
 series-part: 3
 tags:
