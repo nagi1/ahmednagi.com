@@ -3,6 +3,8 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 module.exports = {
 	mode: 'jit',
 	purge: {
+		enabled: true,
+		layers: ['components', 'utilities'],
 		content: [
 			'./.vuepress/theme/**/*.html',
 			'./.vuepress/**/*.vue',
@@ -57,10 +59,10 @@ module.exports = {
 				content: ['Tajawal', ...defaultTheme.fontFamily.sans],
 			},
 			minHeight: {
-				'72': '18rem',
+				72: '18rem',
 			},
 			opacity: {
-				'90': '0.9',
+				90: '0.9',
 			},
 		},
 		gradients: (theme) => ({

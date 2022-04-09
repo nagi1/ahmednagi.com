@@ -10,6 +10,13 @@
 
 		<!-- Page. -->
 
+		<!-- Top Navigation -->
+		<!-- <div class="relative hidden w-full max-w-screen-xl mx-auto overflow-hidden shadow-lg h-14 md:flex bg-primary xl:my-8 xl:rounded-lg">
+			<div class="absolute right-3">
+				<Icon icon="curve-arrow" class="w-10" secondary="text-white" />
+			</div>
+		</div> -->
+
 		<div class="relative w-full max-w-screen-xl mx-auto mt-4 overflow-hidden shadow-lg xl:my-8 xl:rounded-lg">
 			<!-- Quick links -->
 			<!-- <div class="flex items-center px-3 py-2 space-x-5 rtl:flex-row-reverse bg-ternary text-primary">

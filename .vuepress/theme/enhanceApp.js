@@ -3,7 +3,7 @@ import VueI18n from 'vue-i18n';
 import messages from './messages';
 import ImgLazy from 'vuepress-plugin-img-lazy/ImgLazy';
 
-export default ({ Vue, options }) => {
+export default ({ Vue, options, router }) => {
 	Vue.use(VueCookies);
 	Vue.use(VueI18n);
 	Vue.component(ImgLazy.name, ImgLazy);
@@ -14,5 +14,12 @@ export default ({ Vue, options }) => {
 		fallbackLocale: 'en',
 		silentTranslationWarn: true,
 		silentFallbackWarn: true,
+	});
+
+	router.addRoute({
+		path: '/facebook-group',
+		beforeEnter(to, from, next) {
+			window.location.href = 'https://www.facebook.com/groups/laravel.arabic';
+		},
 	});
 };
