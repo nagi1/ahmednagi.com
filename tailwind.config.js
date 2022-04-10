@@ -1,21 +1,18 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
+const colors = require('tailwindcss/colors');
 
 module.exports = {
-	mode: 'jit',
-	purge: {
-		enabled: true,
-		layers: ['components', 'utilities'],
-		content: [
-			'./.vuepress/theme/**/*.html',
-			'./.vuepress/**/*.vue',
-			'./.vuepress/theme/**/*.jsx',
-			'./.vuepress/theme/**/*.styl',
-			'./.vuepress/theme/**/*.md',
-			'./.vuepress/theme/**/*.js',
-			'./.vuepress/theme/**/*.css',
-			'./node_modules/prismjs/themes/prism-okaidia.css',
-		],
-	},
+	content: [
+		'./.vuepress/theme/**/*.html',
+		'./.vuepress/**/*.vue',
+		'./.vuepress/theme/**/*.jsx',
+		'./.vuepress/theme/**/*.styl',
+		'./.vuepress/theme/**/*.md',
+		'./.vuepress/theme/**/*.js',
+		'./.vuepress/theme/**/*.css',
+		'./node_modules/prismjs/themes/prism-okaidia.css',
+	],
+
 	theme: {
 		textColor: (theme) => ({
 			primary: 'var(--color-text-primary)',
@@ -52,6 +49,9 @@ module.exports = {
 				black: '#000',
 				white: '#fff',
 				brand: '#1da1f2',
+				green: colors.emerald,
+				yellow: colors.amber,
+				purple: colors.violet,
 			},
 			fontFamily: {
 				sans: ['"Tajawal"', ...defaultTheme.fontFamily.sans],
@@ -73,18 +73,7 @@ module.exports = {
 			moonlight: ['30deg', theme('colors.gray.100'), theme('colors.gray.300')],
 		}),
 	},
-	variants: {
-		gradients: ['responsive', 'hover'],
-		textColor: ['responsive', 'hover', 'focus', 'group-hover'],
-		backgroundColor: ['responsive', 'hover', 'focus', 'group-hover'],
-		opacity: ['responsive', 'hover', 'focus', 'group-hover'],
-		flexDirection: ['responsive', 'direction'],
-		margin: ['responsive', 'direction'],
-		padding: ['responsive', 'direction'],
-		borderRadius: ['responsive', 'direction'],
-		textAlign: ['responsive', 'hover', 'focus', 'direction'],
-		inset: ['responsive', 'hover', 'focus', 'direction'],
-	},
+
 	plugins: [require('tailwindcss-plugins/gradients'), require('tailwindcss-dir')()],
 	corePlugins: {
 		container: false,

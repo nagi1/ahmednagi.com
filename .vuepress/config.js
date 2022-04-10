@@ -1,3 +1,4 @@
+const path = require('path');
 module.exports = {
 	title: 'Ahmed Nagi',
 	plugins: [
@@ -87,8 +88,9 @@ module.exports = {
 	},
 
 	postcss: {
-		plugins: [require('tailwindcss')('./tailwind.config.js'), require('autoprefixer')],
+		plugins: [require('postcss-import'), require('tailwindcss')(path.resolve(__dirname, '../tailwind.config.js')), require('autoprefixer')],
 	},
+
 	themeConfig: {
 		domain: 'https://ahmednagi.com',
 
