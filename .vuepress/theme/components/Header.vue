@@ -6,7 +6,7 @@
 			<div class="text-sm font-semibold tracking-wider uppercase group-hover:text-primary">{{ $t('header.home') }}</div>
 		</router-link>
 
-		<div class="text-4xl font-bold leading-relaxed text-primary" v-text="effectiveTitle"></div>
+		<h1 class="text-4xl font-bold leading-relaxed text-primary" v-text="effectiveTitle"></h1>
 
 		<div class="mt-3 text-lg font-medium text-secondary md:text-xl" v-if="effectiveSubtitle" v-text="effectiveSubtitle"></div>
 	</header>

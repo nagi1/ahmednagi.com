@@ -16,10 +16,12 @@ export default ({ Vue, options, router }) => {
 		silentFallbackWarn: true,
 	});
 
-	router.addRoute({
-		path: '/facebook-group',
-		beforeEnter(to, from, next) {
-			window.location.href = 'https://www.facebook.com/groups/laravel.arabic';
+	router.addRoutes([
+		{
+			path: '/facebook-group/',
+			beforeEnter(to, from, next) {
+				window.location.href = 'https://www.facebook.com/groups/laravel.arabic';
+			},
 		},
-	});
+	]);
 };

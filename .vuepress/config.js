@@ -38,6 +38,15 @@ module.exports = {
 			},
 		],
 		[
+			'robots',
+			{
+				host: 'https://ahmednagi.com',
+				disallowAll: false,
+				allowAll: true,
+				sitemap: '/sitemap.xml',
+			},
+		],
+		[
 			'@vuepress/blog',
 			{
 				frontmatters: [
@@ -95,7 +104,7 @@ module.exports = {
 		domain: 'https://ahmednagi.com',
 
 		repo: 'https://github.com/nagi1/ahmednagi.com',
-		nav: ['/', '/tag/', '/all/snippets/', '/all/'],
+		nav: ['/', '/tag/', '/all/snippets/', '/all/', '/facebook-group/'],
 		// nav: ['/', '/tag/', '/all/snippets/', '/all/', '/work/', '/ar/work/'],
 		author: {
 			name: 'Ahmed Nagi',

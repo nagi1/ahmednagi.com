@@ -11,21 +11,21 @@
 		<!-- Page. -->
 
 		<!-- Top Navigation -->
-		<div class="relative items-center hidden w-full max-w-screen-xl px-5 mx-auto overflow-hidden shadow-lg h-14 md:flex bg-primary xl:my-8 xl:rounded-lg">
+		<div class="relative items-center hidden w-full max-w-screen-xl px-5 mx-auto overflow-hidden shadow-lg h-14 md:flex bg-primary xl:my-4 xl:rounded-lg">
 			<div class="flex items-center space-x-3">
 				<router-link class="text-lg font-semibold no-underline rtl:ml-3 text-primary hover:text-linkHover hover:underline" to="/">
-					<img class="h-12" src="/logo.png" lazy alt="Logo" />
+					<img class="h-12" src="/logo.png" lazy alt="AhmedNagi.com logo" />
 				</router-link>
 
-				<router-link class="text-lg font-semibold no-underline text-primary hover:text-linkHover hover:underline" :to="$lang == 'ar' ? '/ar/' : '/'">{{ $t('Home') }}</router-link>
+				<router-link class="text-lg font-semibold no-underline text-primary hover:text-linkHover hover:underline" :to="$lang == 'ar' ? '/ar/' : '/'">{{ $t('header.home') }}</router-link>
 
-				<a @click.prevent="$refs.navigator.open()" class="text-lg font-semibold no-underline text-primary hover:text-linkHover hover:underline" href="#">{{ $t('Search') }}</a>
+				<a @click.prevent="$refs.navigator.open()" class="text-lg font-semibold no-underline text-primary hover:text-linkHover hover:underline" href="#">{{ $t('header.search') }}</a>
 
-				<router-link class="text-lg font-semibold no-underline text-primary hover:text-linkHover hover:underline" to="/snippets">{{ $t('Snippets') }}</router-link>
+				<router-link class="text-lg font-semibold no-underline text-primary hover:text-linkHover hover:underline" to="/snippets">{{ $t('header.snippets') }}</router-link>
 
-				<router-link class="text-lg font-semibold no-underline text-primary hover:text-linkHover hover:underline" to="/facebook-group">{{ $t('Community') }}</router-link>
+				<router-link class="text-sm font-semibold no-underline md:text-lg text-primary hover:text-linkHover hover:underline" to="/facebook-group">{{ $t('header.community') }}</router-link>
 			</div>
-			<div class="flex justify-center ml-auto">
+			<div class="flex justify-center ltr:ml-auto rtl:mr-auto">
 				<!-- Twitter -->
 
 				<a href="https://twitter.com/nagiworks" class="mx-2 border-0 text-primary hover:text-blue-500">

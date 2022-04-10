@@ -1,10 +1,10 @@
 <template>
 	<form action="https://app.convertkit.com/forms/2018740/subscriptions" method="post" data-sv-form="2018740" data-uid="37ce9dbcf6" data-format="inline" data-version="5" :data-options="options">
 		<div class="rtl:text-right text-primary">
-			<h1 class="text-3xl font-semibold">{{ $t('newsLetter.title') }}</h1>
+			<div class="text-3xl font-semibold">{{ $t('newsLetter.title') }}</div>
 			<p class="mt-3 text-lg">{{ $t('newsLetter.description') }}</p>
 		</div>
-		<div style="position: absolute; left: -5000px;" aria-hidden="true">
+		<div style="position: absolute; left: -5000px" aria-hidden="true">
 			<input type="text" name="b_1825e48b40ecf67719a0884fa_33688ddc10" tabindex="-1" value="" />
 		</div>
 

@@ -12,6 +12,9 @@ const messages = {
 		header: {
 			home: 'Home',
 			share: 'Share',
+			search: 'Search',
+			snippets: 'Snippets',
+			community: 'Join Community',
 		},
 		newsLetter: {
 			successMessage: 'Success! Now check your email to confirm your subscription.',
@@ -40,7 +43,10 @@ const messages = {
 		},
 		header: {
 			home: 'الرئيسية',
-			share: 'Share',
+			share: 'مشاركة',
+			search: 'البحث',
+			snippets: 'الحلول',
+			community: 'انضم لجروب الفيس',
 		},
 		newsLetter: {
 			successMessage: 'شكرا! الرجاء التحقق من بريدك الالكتروني لتأكيد الاشتراك.',
