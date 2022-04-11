@@ -9,8 +9,7 @@ module.exports = {
 		'./.vuepress/theme/**/*.styl',
 		'./.vuepress/theme/**/*.md',
 		'./.vuepress/theme/**/*.js',
-		'./.vuepress/theme/**/*.css',
-		'./node_modules/prismjs/themes/prism-okaidia.css',
+		// './.vuepress/theme/**/*.css',
 	],
 
 	theme: {

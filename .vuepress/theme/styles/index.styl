@@ -59,11 +59,12 @@
 }
 /*! purgecss end ignore */
 
-
-
-
-
 @tailwind components;
+
+ /*! purgecss start ignore */
+@require 'codetheme'
+/*! purgecss end ignore */
+
 @tailwind utilities;
 
 
@@ -91,7 +92,7 @@ inverse-style(prop, value, inverse-prop, default-value) {
 @require 'tables'
 @require 'ribbons'
 
-@require '~prismjs/themes/prism-okaidia.css'
+
 @require 'code'
 @require 'container'
 @require 'content'

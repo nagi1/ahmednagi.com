@@ -112,7 +112,7 @@ module.exports = {
 		},
 		articlesPerPage: 10,
 		minimumFeaturedArticles: 10,
-		featuredArticles: ['/oilly-telegram-bot/', '/create-social-media-headers/', '/laravel-deploy-bitbucket/', '/hill-chart/'],
+		featuredArticles: ['/create-skeleton-loader-vuejs/', '/oilly-telegram-bot/', '/create-social-media-headers/', '/laravel-deploy-bitbucket/', '/hill-chart/'],
 	},
 	head: [
 		['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1' }],
