@@ -22,27 +22,8 @@ tags:
 
 ## خريطة الرحلة
 
-- [قبل ما نبدأ](#قبل-ما-نبدأ)
-  - [تأكد ان عندك SSH للسيرفر](#تأكد-ان-عندك-ssh-للسيرفر)
-  - [اعمل bitbucket repo](#اعمل-bitbucket-repo)
-  - [ظبط اعدادات الريبو و بيئة الرفع](#ظبط-اعدادات-الريبو-و-بيئة-الرفع)
-    - [انشاء ملف bitbucket-pipeline.yaml](#انشاء-ملف-bitbucket-pipelineyaml)
-    - [انشاء ملف Envoy.blade.php](#انشاء-ملف-bitbucket-pipelineyaml)
-- [اخطأ هتسهرك هتحيرك](#اخطأ-هتسهرك-هتحيرك)
-- [ازاي كل حاجة مترابطة ببعضها؟](#ازاي-كل-حاجة-مترابطة-ببعضها)
-  - [نظرة عامة عن خطوات تنفيذ الاوامر](#نظرة-عامة-عن-خطوات-تنفيذ-الاوامر)
-  - [شرح محتويات مجلد البرودكشن](#شرح-محتويات-مجلد-البرودكشن)
-  - [السرفرات المتعرفه جوا Envoy.blade.php](#السرفرات-المتعرفه-جوا-envoybladephp)
-  - [خلينا نعرف الاسكربتات جوا ال Envoy](#خلينا-نعرف-الاسكربتات-جوا-ال-envoy)
-    - [Rsync](#rsync)
-    - [Setup Symlinks](#setup-symlinks)
-    - [Verify Install](#verify-install)
-    - [Activate Releases](#activate-releases)
-    - [Migration](#migration)
-    - [Additional tasks](#additional-tasks)
-  - [قوة ال Symlink](#قوة-ال-symlink)
-  - [bitbucket-pipeline.yaml](#bitbucket-pipelineyaml)
-- [كلمات اخيرة](#كلمات-اخيرة)
+[[toc]]
+
 
 ## قبل ما نبدأ
 

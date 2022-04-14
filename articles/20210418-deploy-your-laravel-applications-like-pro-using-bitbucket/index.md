@@ -22,25 +22,7 @@ It also designed to be copy-paste friendly as you go!
 
 ## Trip Map
 
-- [Getting Ready](#getting-ready)
-  - [Make sure to have ssh access](#make-sure-to-have-ssh-access)
-  - [Setup new bitbucket repo](#setup-new-bitbucket-repo)
-  - [Configure repository and deployment variables](#configure-repository-and-deployment-variables)
-- [Avoid Caffeine overdose](#avoid-caffeine-overdose)
-- [How these all things tie together?](#how-these-all-things-tie-together)
-  - [Deployment steps overview](#deployment-steps-overview)
-  - [Production directory structure](#production-directory-structure)
-  - [Severs defined in Envoy.blade.php](#severs-defined-in-envoybladephp)
-  - [Jump inside Envoy's scripts](#lets-jump-inside-envoys-scripts)
-    - [Rsync](#rsync)
-    - [Setup Symlinks](#setup-symlinks)
-    - [Verify Install](#verify-install)
-    - [Activate Releases](#activate-releases)
-    - [Migration](#migration)
-    - [Additional tasks](#additional-tasks)
-  - [Symlink powers](#symlink-powers)
-  - [bitbucket-pipeline.yaml](#bitbucket-pipelineyaml)
-- [Closing Thoughts](#closing-thoughts)
+[[toc]]
 
 ## Getting Ready
 

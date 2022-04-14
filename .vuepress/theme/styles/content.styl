@@ -14,12 +14,16 @@
         font-size theme('fontSize.xl')
         @media md
             font-size theme('fontSize.2xl')
-    
+    ol
+        list-style decimal
+        list-style-position outside
+
     // Normal list style for content.
     ul
         list-style-type disc
         list-style-position outside
-        padding-left theme('padding.8')
+        // padding-left theme('padding.8')
+        inverse-style(padding-left, theme('padding.8'), padding-right, theme('padding.8'));
 
     // Code breaks out of the container.
     div[class*="language-"]
