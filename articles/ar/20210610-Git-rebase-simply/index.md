@@ -1,7 +1,7 @@
 ---
 title: Git rebase ببساطة
 image: /covers/git-rebase.png
-description: هنكلك تعقيد ال Git rebase الى الابد
+description: هفكلك تعقيد ال Git rebase الى الابد
 permalink: ar/git-rebase-simply
 date: 2020-06-10 16:00
 tags:
