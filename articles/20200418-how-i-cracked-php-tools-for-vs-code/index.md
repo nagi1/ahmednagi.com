@@ -12,7 +12,7 @@ tags:
 ---
 <DisclaimerBox body="This tutorial is for educational purposes only." />
 
-Last week I tried to unlock [Intelephense here](https://ahmednagi.com/unlock-intelephense/), and I got positive results so why not try the same approach with [PHP Tools](https://marketplace.visualstudio.com/items?itemName=DEVSENSE.phptools-vscode)?
+Last week I tried to unlock [Intelephense here](https://ahmednagi.com/crack-intelephense/), and I got positive results so why not try the same approach with [PHP Tools](https://marketplace.visualstudio.com/items?itemName=DEVSENSE.phptools-vscode)?
 
 > **Note:** *that I'm applying this on the current release 1.0.4, method names might change in upcoming releases, though the same principles applies.*
 
@@ -28,7 +28,7 @@ Then navigate to `"out/src/extention.js"` file in `"devsense.phptools-vscode"` f
 
 #### Open and reformat
 
-This one is a little bit different from [the last one](https://ahmednagi.com/unlock-intelephense/), there's no unminified TypeScript to guide us this time.
+This one is a little bit different from [the last one](https://ahmednagi.com/crack-intelephense/), there's no unminified TypeScript to guide us this time.
 
 * Disable any other php extension and enable PHP Tools only.
 * Open `extention.js` and use prettier to reformat the obscured code.
