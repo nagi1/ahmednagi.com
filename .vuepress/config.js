@@ -70,6 +70,7 @@ module.exports = {
 		articlesPerPage: 10,
 		minimumFeaturedArticles: 10,
 		featuredArticles: ['/90-days-to-web-dev-job/', '/create-skeleton-loader-vuejs/', '/create-social-media-headers/', '/laravel-deploy-bitbucket/', '/hill-chart/', '/oilly-telegram-bot/'],
+		arFeaturedArticles: ['/ar/laravel-dx-experience/'],
 	},
 	head: [
 		['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1' }],

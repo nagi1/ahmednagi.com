@@ -3,7 +3,7 @@
 		<template v-slot:default="preview">
 			<div class="relative w-full mx-auto overflow-hidden rounded-md shadow bg-primary sm:max-w-lg ring-1">
 				<div class="flex flex-col space-y-2">
-					<a :href="url" class="w-full"><img @error="replaceByDefault" class="object-cover w-full h-60" :src="preview.image" :alt="preview.title" /></a>
+					<a :href="url" target="__blank" class="w-full"><img @error="replaceByDefault" class="object-cover w-full h-60" :src="preview.image" :alt="preview.title" /></a>
 
 					<div class="flex flex-col p-3 space-y-1">
 						<a :href="url" class="m-0 text-lg leading-tight no-underline text-primary hover:no-underline hover:text-primary sm:text-xl">{{ limit(preview.title, 100) }}</a>

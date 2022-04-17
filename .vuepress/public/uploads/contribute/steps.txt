@@ -1,0 +1,13 @@
+git clone https://github.com/dansoppelsa/laravel-carbon-macros.git
+
+cd laravel-carbon-macros
+
+code .
+
+composer install
+
+Get Egyptioan holidays from https://www.presidency.eg/ar/%D9%85%D8%B5%D8%B1/%D8%A7%D9%84%D8%B9%D8%B7%D9%84%D8%A7%D8%AA-%D8%A7%D9%84%D8%B1%D8%B3%D9%85%D9%8A%D8%A9/
+
+php lcm
+
+php lcm generate-ide-helpers

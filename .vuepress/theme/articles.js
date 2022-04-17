@@ -10,7 +10,10 @@ export default ({ Vue }) => {
 				return this.$site.pages.filter((page) => page.isSnippet).sort(sortByDate);
 			},
 			$featuredArticles() {
-				const { featuredArticles, minimumFeaturedArticles } = this.$themeConfig;
+				const { minimumFeaturedArticles } = this.$themeConfig;
+
+				const featuredArticles = this.$lang === 'ar' ? this.$themeConfig.arFeaturedArticles : this.$themeConfig.featuredArticles;
+
 				let featured = fetchPagesInArray(this.$articles, featuredArticles);
 
 				if (featured.length < minimumFeaturedArticles) {
