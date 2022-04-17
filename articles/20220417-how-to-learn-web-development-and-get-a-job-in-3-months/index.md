@@ -6,7 +6,6 @@ permalink: 90-days-to-web-dev-job
 subtitle: "A step by step guide to escape tutorial hell"
 date: 2022-04-17 16:00
 tags:
-  - webdevelopment
   - guide
   - productivity
 ---

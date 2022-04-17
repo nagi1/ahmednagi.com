@@ -1,9 +1,9 @@
 <template>
 	<div class="bg-primary">
 		<div class="container-xl">
-			<Header :subtitle="subtitle" />
+			<Header :title="subtitle" />
 			<ArticleGrid :articles="articles" />
-			<Pagination />
+			<Pagination :paginatorInstance="paginatorInstance" />
 		</div>
 	</div>
 </template>
@@ -15,13 +15,21 @@
 
 	export default {
 		components: { Header, ArticleGrid, Pagination },
+
 		computed: {
+			paginatorInstance() {
+				return this.$pagination ? this.$pagination : this.$paginator;
+			},
 			articles() {
-				return this.$pagination.pages;
+				return this.paginatorInstance.posts ? this.paginatorInstance.posts : this.paginatorInstance.pages;
+			},
+			paginationIndex() {
+				const index = this.paginatorInstance ? this.paginatorInstance.paginationIndex : 0;
+				return index;
 			},
 			subtitle() {
-				if (this.$pagination && this.$pagination.paginationIndex > 0) {
-					return `Page ${this.$pagination.paginationIndex + 1}`;
+				if (this.paginatorInstance && this.paginationIndex > 0) {
+					return `${this.$t('pagination.page')} ${this.paginationIndex + 1}`;
 				}
 			},
 		},

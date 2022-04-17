@@ -6,9 +6,7 @@ subtitle: "with javascript using d3.js"
 date: 2021-03-24 22:20
 description: Walk you through re-implementing hill charts with javascript using d3.js
 tags:
-  - hill-chart
-  - d3.js
-  - js
+  - javascript
   - project
 
 ---

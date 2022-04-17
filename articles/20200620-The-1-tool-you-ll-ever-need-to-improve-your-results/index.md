@@ -6,8 +6,7 @@ subtitle: "Helping you seeing the bigger picture"
 date: 2020-06-20 22:20
 description: How to visualize your progress in a project and how it might help you see the bigger picture.
 tags:
-  - hill-chart
-  - todo
+  - javascript
   - visualization
 
 ---

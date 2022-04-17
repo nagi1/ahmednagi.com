@@ -6,11 +6,9 @@ permalink: create-social-media-headers
 subtitle: "Create headers that represent you the best"
 date: 2022-03-27 16:00
 tags:
-  - css
   - tailwindcss
-  - headers
-  - social
-  - guides
+  - guide
+  - header
 ---
 
 Today I'll walk you through how I created beautiful headers for my Twitter and LinkedIn profiles that represented me the best, and how you can get started creating your own easily.
@@ -269,4 +267,4 @@ If you need help getting started, don't hesitate to reach out and say Hi. My ema
 - It's fine to use pure CSS but I recommend using Tailwindcss you'll enjoy using it I guarantee you!
 - Don't forget to share your awesomeness with the community!
 
-<span class="text-2xl w-full font-semibold text-center">Keep building even if there's no one watching!</span>
+<span class="w-full text-2xl font-semibold text-center">Keep building even if there's no one watching!</span>

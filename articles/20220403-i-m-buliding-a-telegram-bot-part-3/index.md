@@ -10,7 +10,6 @@ series-part: 3
 tags:
   - telegram
   - nodejs
-  - serires
   - productivity
 ---
 

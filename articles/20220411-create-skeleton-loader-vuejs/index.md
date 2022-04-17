@@ -6,7 +6,7 @@ permalink: create-skeleton-loader-vuejs
 subtitle: "Skeleton loaders"
 date: 2022-04-11 16:00
 tags:
-  - tutorial
+  - guide
   - vuejs
   - design
   - UX

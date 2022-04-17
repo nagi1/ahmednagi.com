@@ -30,9 +30,9 @@
 		},
 		methods: {
 			classesFor(tag) {
-				if (tag.name === 'Laravel') return 'bg-topaz text-white';
-				if (tag.name === 'Tailwind') return 'bg-river text-white';
-				if (tag.name === 'Vue' || tag.name === 'Vuepress') return 'bg-emerald text-white';
+				if (tag.name === 'Laravel') return 'bg-red-400 text-white';
+				if (tag.name === 'Tailwind') return 'bg-Sky-400 text-white';
+				if (tag.name === 'Vue' || tag.name === 'Vuepress') return 'bg-emerald-500 text-white';
 				if (tag.name === 'snippet' || tag.name === 'snippets') return 'bg-purple-600 text-white';
 				return 'bg-moonlight text-gray-700';
 			},

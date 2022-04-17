@@ -6,11 +6,8 @@ subtitle: "Achieve zero-downtime deployments"
 date: 2021-04-18 22:20
 description: "How to deploy laravel applications with zero-downtime using Bitbucket pipelines. Detailed technical guide"
 tags:
-  - envoy
-  - bitbucket
-  - deploy
-  - pipelines
   - laravel
+  - deploy
 ---
 
 In this journey I'll be your guide into how to deploy your laravel application to multiple servers using CI and pipelines that will make your life so much easier and allow you to achieve zero-downtime deployments.

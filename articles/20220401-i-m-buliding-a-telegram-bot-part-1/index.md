@@ -5,10 +5,11 @@ description: Walkthrough my journey to create a telegram bot that will remind ch
 permalink: oilly-telegram-bot
 subtitle: "One less thing to remember"
 date: 2022-04-02 16:00
+series: oilly-telegram-bot
+series-part: 1
 tags:
   - telegram
   - nodejs
-  - serires
   - productivity
 ---
 

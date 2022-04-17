@@ -7,7 +7,7 @@ export default ({ Vue }) => {
 				return this.$site.pages.filter((page) => page.isArticle && this.$lang === page.lang).sort(sortByDate);
 			},
 			$snippets() {
-				return this.$site.pages.filter((page) => page.frontmatter.layout === 'Snippet').sort(sortByDate);
+				return this.$site.pages.filter((page) => page.isSnippet).sort(sortByDate);
 			},
 			$featuredArticles() {
 				const { featuredArticles, minimumFeaturedArticles } = this.$themeConfig;

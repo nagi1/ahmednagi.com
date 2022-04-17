@@ -17,7 +17,8 @@
 	],
 	"scripts": {
 		"dev": "vuepress dev",
-		"build": "vuepress build"
+		"build": "vuepress build",
+		"check-md": "vuepress check-md"
 	},
 	"devDependencies": {
 		"@vue/babel-preset-app": "^4.5.11",
@@ -46,8 +47,12 @@
 		"tailwindcss-plugins": "^0.3.0",
 		"vuepress": "^1.8.0",
 		"vuepress-plugin-canonical-with-pagination": "^0.2.0",
+		"vuepress-plugin-check-md": "^0.0.2",
 		"vuepress-plugin-disqus": "^0.2.0",
+		"vuepress-plugin-facebook-pixel": "^1.0.0",
 		"vuepress-plugin-google-gtag": "^1.0.1",
+		"vuepress-plugin-reading-time": "^0.1.1",
+		"vuepress-plugin-rss-feed": "^1.0.1",
 		"vuepress-plugin-seo": "0.1.4",
 		"webp-loader": "^0.6.0",
 		"webpack": "^4",
@@ -56,6 +61,7 @@
 	"dependencies": {
 		"@ashwamegh/vue-link-preview": "^0.2.5",
 		"@vuepress/plugin-last-updated": "^1.9.7",
+		"@yubisaki/vuepress-plugin-pagination": "^0.1.9",
 		"vue-cookies": "^1.7.0",
 		"vue-i18n": "^8.24.3",
 		"vue-router": "~3.1.3",

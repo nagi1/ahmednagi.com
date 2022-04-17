@@ -1,73 +1,30 @@
 const path = require('path');
+const lastUpdateOptions = require('./theme/config-options/lastUpdateOptions.js');
+const siteMapOptions = require('./theme/config-options/siteMapOptions.js');
+const feedOptions = require('./theme/config-options/feedOptions.js');
+const facebookPixelOptions = require('./theme/config-options/facebookPixelOptions.js');
+const seoOptions = require('./theme/config-options/seoOptions.js');
+const canconcialOptions = require('./theme/config-options/canconcialOptions.js');
+const readingTimeOptions = require('./theme/config-options/readingTimeOptions.js');
+const robotsOptions = require('./theme/config-options/robotsOptions.js');
+const blogOptions = require('./theme/config-options/blogOptions.js');
+const paginationOptions = require('./theme/config-options/paginationOptions.js');
+const paginator = require('./theme/pagination/index');
+
 module.exports = {
 	title: 'Ahmed Nagi',
 	plugins: [
-		[
-			'@vuepress/last-updated',
-			{
-				transformer: (timestamp, lang) => {
-					return new Date(timestamp).toLocaleDateString();
-				},
-				dateOptions: {
-					hour12: true,
-				},
-			},
-		],
-		[
-			'sitemap',
-			{
-				hostname: 'https://ahmednagi.com',
-			},
-		],
-		[
-			'feed',
-			{
-				canonical_base: 'https://ahmednagi.com',
-			},
-		],
-		[
-			'vuepress-plugin-seo',
-			{
-				image: ($page, $site) => ($page.frontmatter.image ? $site.themeConfig.domain + $page.frontmatter.image : $site.themeConfig.domain + '/uploads/ahmednagi.png'),
-			},
-		],
-		[
-			'vuepress-plugin-canonical-with-pagination',
-			{
-				baseURL: 'https://ahmednagi.com', // base url for your schema, mandatory, default: ''
-			},
-		],
-		[
-			'robots',
-			{
-				host: 'https://ahmednagi.com',
-				disallowAll: false,
-				allowAll: true,
-				sitemap: '/sitemap.xml',
-			},
-		],
-		[
-			'@vuepress/blog',
-			{
-				frontmatters: [
-					{
-						id: 'tag',
-						title: 'Tag',
-						keys: ['tags'],
-						path: '/tag/',
-						layout: 'Tags',
-						scopeLayout: 'ArticlesPaginated',
-						pagination: {
-							layout: 'ArticlesPaginated',
-							getPaginationPageTitle: (_, key) => `${key} Tag`,
-						},
-					},
-				],
-				globalPagination: {
-					lengthPerPage: 10,
-				},
-			},
-		],
+		['@vuepress/last-updated', lastUpdateOptions],
+		['sitemap', siteMapOptions],
+		['check-md'],
+		['feed', feedOptions],
+		['vuepress-plugin-facebook-pixel', facebookPixelOptions],
+		['vuepress-plugin-seo', seoOptions],
+		['vuepress-plugin-canonical-with-pagination', canconcialOptions],
+		['vuepress-plugin-reading-time', readingTimeOptions],
+		['robots', robotsOptions],
+		[paginator, paginationOptions],
+		['@vuepress/blog', blogOptions],
 		'disqus',
 		'img-lazy',
 		['@vuepress/plugin-google-analytics', { ga: 'UA-189097283-1' }],
@@ -112,7 +69,7 @@ module.exports = {
 		},
 		articlesPerPage: 10,
 		minimumFeaturedArticles: 10,
-		featuredArticles: ['/create-skeleton-loader-vuejs/', '/oilly-telegram-bot/', '/create-social-media-headers/', '/laravel-deploy-bitbucket/', '/hill-chart/'],
+		featuredArticles: ['/90-days-to-web-dev-job/', '/create-skeleton-loader-vuejs/', '/create-social-media-headers/', '/laravel-deploy-bitbucket/', '/hill-chart/', '/oilly-telegram-bot/'],
 	},
 	head: [
 		['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1' }],

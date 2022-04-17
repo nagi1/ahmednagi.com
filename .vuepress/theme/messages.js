@@ -1,5 +1,9 @@
 const messages = {
 	en: {
+		metaData: {
+			readingTime: 'min read',
+			quickRead: 'Quick read',
+		},
 		notFound: {
 			areYouLost: '404 Are you lost :\\?',
 		},
@@ -29,9 +33,14 @@ const messages = {
 			newer: 'Newer',
 			olderArticles: 'Older articles',
 			older: 'Older',
+			page: 'Page',
 		},
 	},
 	ar: {
+		metaData: {
+			readingTime: 'دقائق للقراءة',
+			quickRead: 'قراءة سريعة',
+		},
 		notFound: {
 			areYouLost: '404 شكلك دخلت على لينك غلط :\\',
 		},
@@ -61,6 +70,7 @@ const messages = {
 			newer: 'الاحدث',
 			olderArticles: 'المقالات الاقدم',
 			older: 'الاقدم',
+			page: 'الصفحة',
 		},
 	},
 };

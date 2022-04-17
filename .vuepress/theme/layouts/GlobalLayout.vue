@@ -14,16 +14,19 @@
 		<div class="relative items-center hidden w-full max-w-screen-xl px-5 mx-auto overflow-hidden shadow-lg h-14 md:flex bg-primary xl:my-4 xl:rounded-lg">
 			<div class="flex items-center space-x-3">
 				<router-link class="text-lg font-semibold no-underline rtl:ml-3 text-primary hover:text-linkHover hover:underline" to="/">
-					<img class="h-12" src="/logo.png" lazy alt="AhmedNagi.com logo" />
+					<img class="h-12 min-h-12" src="/logo.png" lazy alt="AhmedNagi.com logo" />
 				</router-link>
 
 				<router-link class="text-lg font-semibold no-underline text-primary hover:text-linkHover hover:underline" :to="$lang == 'ar' ? '/ar/' : '/'">{{ $t('header.home') }}</router-link>
+
+				<router-link class="text-lg font-semibold text-red-500 no-underline hover:text-linkHover hover:underline" to="/tag/laravel">Laravel</router-link>
+				<router-link class="text-lg font-semibold no-underline text-emerald-600 hover:text-linkHover hover:underline" to="/tag/vuejs">Vuejs</router-link>
 
 				<a @click.prevent="$refs.navigator.open()" class="text-lg font-semibold no-underline text-primary hover:text-linkHover hover:underline" href="#">{{ $t('header.search') }}</a>
 
 				<router-link class="text-lg font-semibold no-underline text-primary hover:text-linkHover hover:underline" to="/snippets">{{ $t('header.snippets') }}</router-link>
 
-				<router-link class="text-sm font-semibold no-underline md:text-lg text-primary hover:text-linkHover hover:underline" to="/facebook-group">{{ $t('header.community') }}</router-link>
+				<router-link class="hidden font-semibold no-underline md:text-lg text-primary hover:text-linkHover hover:underline" to="/facebook-group">{{ $t('header.community') }}</router-link>
 			</div>
 			<div class="flex justify-center ltr:ml-auto rtl:mr-auto">
 				<!-- Twitter -->
@@ -76,6 +79,7 @@
 
 			</div> -->
 
+			<back-to-top />
 			<MenuButton @click="$refs.navigator.open()" />
 
 			<div class="flex flex-col">
@@ -105,6 +109,7 @@
 	import Footer from '@theme/components/Footer';
 	import Bus from '@theme/Bus';
 	import SubscribeForm from '@theme/components/SubscribeForm';
+	import BackToTop from '@theme/components/BackToTop';
 
 	// Available layouts.
 	import Article from '@theme/layouts/Article';
@@ -119,6 +124,7 @@
 			AnimatedGradient,
 			Navigator,
 			MenuButton,
+			BackToTop,
 			DarkSwitcher,
 			Footer,
 			Article,

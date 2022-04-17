@@ -32,7 +32,7 @@
 		<!-- Related articles. -->
 		<div v-if="relatedArticles.length >= 1" class="bg-primary">
 			<div class="container py-4 sm:py-8">
-				<h2>{{ $lang === 'ar' ? 'اقرأ ايضا' : 'Read More' }}</h2>
+				<h2>{{ $lang === 'ar' ? 'اقرأ ايضا' : 'Read more' }}</h2>
 				<div class="flex flex-wrap -mx-5">
 					<ArticleCard v-for="article in relatedArticles" :key="article.key" :article="article" class="mx-5 mb-8" style="flex: 1 1 300px" />
 				</div>

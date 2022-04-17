@@ -25,6 +25,8 @@ function classify(page) {
 		page.frontmatter.layout !== 'Snippet' &&
 		page.frontmatter.layout !== 'SnippetsAll';
 
+	page.isSnippet = page.frontmatter.layout == 'Snippet';
+
 	page.isTag = page.regularPath.startsWith('/tag/');
 	page.isSearchable = page.regularPath.indexOf('/page/') === -1;
 }

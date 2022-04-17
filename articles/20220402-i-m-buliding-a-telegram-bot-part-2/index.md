@@ -5,10 +5,11 @@ description: Continuing my journey to create a telegram bot that will remind cha
 permalink: oilly-telegram-bot-part-2
 subtitle: "One less thing to remember powered by Vercel and Firebase"
 date: 2022-04-02 16:00
+series: oilly-telegram-bot
+series-part: 2
 tags:
   - telegram
   - nodejs
-  - serires
   - productivity
 ---
 

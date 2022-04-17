@@ -7,7 +7,7 @@
 
 			<ArticleGrid :articles="$featuredArticles" />
 
-			<Pagination />
+			<Pagination :paginatorInstance="$paginator" />
 
 			<div dir="ltr" class="py-8 pt-8 mb-8 shadow-lg rounded-xl bg-ternary">
 				<div class="container sm:px-10">
