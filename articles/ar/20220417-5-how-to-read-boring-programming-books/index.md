@@ -4,7 +4,7 @@ image: /covers/5-steps-to-read-programming-books.png
 description: تعرف على كيفية قراءة كتب البرمجة الطويلة في 5 خطوات سهلة
 subtitle: لضمان اقصى استفادة
 permalink: ar/5-steps-to-read-programming-books
-date: 2020-04-17 16:00
+date: 2022-04-17 16:00
 tags:
   - books
 ---
