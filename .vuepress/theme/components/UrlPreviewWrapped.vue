@@ -1,7 +1,7 @@
 <template>
 	<vue-link-preview dir="ltr" class="my-5" :url="url">
 		<template v-slot:default="preview">
-			<div class="relative w-full mx-auto overflow-hidden rounded-md shadow-lg hover:ring-2 hover:shadow-xl bg-primary sm:max-w-lg ring-1">
+			<div class="relative w-full mx-auto overflow-hidden border border-blue-700 rounded-md shadow-lg hover:shadow-xl bg-primary sm:max-w-lg">
 				<div class="flex flex-col space-y-2">
 					<a :href="url" target="__blank" class="w-full"><img @error="replaceByDefault" class="object-cover w-full h-60" :src="preview.image" :alt="preview.title" /></a>
 
