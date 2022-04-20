@@ -69,8 +69,18 @@ module.exports = {
 		},
 		articlesPerPage: 10,
 		minimumFeaturedArticles: 10,
-		featuredArticles: ['/90-days-to-web-dev-job/', '/create-skeleton-loader-vuejs/', '/create-social-media-headers/', '/laravel-deploy-bitbucket/', '/hill-chart/', '/oilly-telegram-bot/'],
-		arFeaturedArticles: ['/ar/laravel-dx-experience/'],
+
+		featuredArticles: [
+			'/getting-started-with-opensource/',
+			'/90-days-to-web-dev-job/',
+			'/crack-intelephense/',
+			'/create-skeleton-loader-vuejs/',
+			'/create-social-media-headers/',
+			'/laravel-deploy-bitbucket/',
+			'/hill-chart/',
+			'/oilly-telegram-bot/',
+		],
+		arFeaturedArticles: ['/ar/getting-started-with-opensource/', '/ar/laravel-deploy-bitbucket/', '/ar/90-days-to-web-dev-job/', '/ar/5-steps-to-read-programming-books/'],
 	},
 	head: [
 		['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1' }],

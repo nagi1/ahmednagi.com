@@ -35,7 +35,7 @@ tags:
 
 ## الخطوة 2: تعلم اساسيات الاساسيات
 
-Before diving into HTML/CSS/JS and such you should learn the absolute basics first:
+
 قبل التعمق في HTML/CSS/JS يجب ان تعرف اساسيات الويب اولا:
 
 ### الايام 1 - 2: اساسية الويب
@@ -123,7 +123,7 @@ Before diving into HTML/CSS/JS and such you should learn the absolute basics fir
 ---
 
 
-<span class="text-4xl my-8">
+<span class="my-8 text-4xl">
 💥 بعد هذه النقطة سوف تشعر كانك تعبت زهقت ولاتريد ان تكمل ولكن مفتاح النجاح في الاستمرارية
 </span>
 
@@ -211,13 +211,13 @@ Before diving into HTML/CSS/JS and such you should learn the absolute basics fir
 
 🔥 ابني Todo app باستخدام **vuejs/tailwindcss/firebase**.
 
-## الخطوة 7: ابني مشروع واحد كبير فقط
+## الخطوة 8: ابني مشروع واحد كبير فقط
 
 ### الايام 70 - 85
 
 <dangerBox body="هذه الخطوة اساسية للحصول على الوظيفة" />
 
-- 🏗️ Build this project (**bug tracker app**) using all of the technology you have learned.
+- 🏗️ ابني هاذا المشروع (**bug tracker app**) متتبع الاخطاء مثل Github issues
 - 🛢️ Database/Backend using Firebase.
 - 🎨 Frontend using vuejs and Tailwindcss.
 

@@ -208,7 +208,7 @@ Before diving into HTML/CSS/JS and such you should learn the absolute basics fir
 
 🔥 Build Todo app using **vuejs/tailwindcss/firebase**.
 
-## Step 7: Build this one project
+## Step 8: Build this one project
 
 ### Days 70 - 85
 
