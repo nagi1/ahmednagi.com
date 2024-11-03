@@ -10,6 +10,7 @@ const robotsOptions = require('./theme/config-options/robotsOptions.js');
 const blogOptions = require('./theme/config-options/blogOptions.js');
 const paginationOptions = require('./theme/config-options/paginationOptions.js');
 const paginator = require('./theme/pagination/index');
+const { config } = require( 'process' );
 
 module.exports = {
 	title: 'Ahmed Nagi',
@@ -71,6 +72,7 @@ module.exports = {
 		minimumFeaturedArticles: 10,
 
 		featuredArticles: [
+            '/a-new-journey-in-public/',
 			'/getting-started-with-opensource/',
 			'/90-days-to-web-dev-job/',
 			'/crack-intelephense/',
@@ -78,7 +80,6 @@ module.exports = {
 			'/create-social-media-headers/',
 			'/laravel-deploy-bitbucket/',
 			'/hill-chart/',
-			'/oilly-telegram-bot/',
 		],
 		arFeaturedArticles: ['/ar/getting-started-with-opensource/', '/ar/laravel-deploy-bitbucket/', '/ar/90-days-to-web-dev-job/', '/ar/5-steps-to-read-programming-books/'],
 	},

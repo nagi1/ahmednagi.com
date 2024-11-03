@@ -16,9 +16,9 @@
 		"blog"
 	],
 	"scripts": {
-		"dev": "vuepress dev",
-		"build": "vuepress build",
-		"check-md": "vuepress check-md"
+		"dev": "export NODE_OPTIONS=--openssl-legacy-provider && vuepress dev",
+		"build": "export NODE_OPTIONS=--openssl-legacy-provider && vuepress build",
+		"check-md": "export NODE_OPTIONS=--openssl-legacy-provider && vuepress check-md"
 	},
 	"devDependencies": {
 		"@vue/babel-preset-app": "^4.5.11",
