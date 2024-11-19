@@ -11,7 +11,7 @@ tags:
   - laravel
 ---
 
-![Demo](/uploads/filament-select-action-demo.gif)
+![Demo](/uploads/filament-select-actions.gif)
 
 ```php
 // in register method - AppServiceProvider.php
