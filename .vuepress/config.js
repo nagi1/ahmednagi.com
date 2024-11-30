@@ -72,11 +72,11 @@ module.exports = {
 		minimumFeaturedArticles: 10,
 
 		featuredArticles: [
+            '/add-custom-topbar-to-filament/',
             '/a-new-journey-in-public/',
 			'/getting-started-with-opensource/',
 			'/90-days-to-web-dev-job/',
 			'/crack-intelephense/',
-			'/create-skeleton-loader-vuejs/',
 			'/create-social-media-headers/',
 			'/laravel-deploy-bitbucket/',
 			'/hill-chart/',
